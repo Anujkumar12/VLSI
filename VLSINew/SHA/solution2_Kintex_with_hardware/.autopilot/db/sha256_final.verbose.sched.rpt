@@ -1,0 +1,1486 @@
+
+
+================================================================
+== Vivado HLS Report for 'sha256_final'
+================================================================
+* Date:           Wed Apr 14 12:12:39 2021
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        SHA
+* Solution:       solution2_Kintex_with_hardware
+* Product family: kintexu
+* Target device:  xcku025-ffva1156-1-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.750|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   58|  120|   58|  120|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+--------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  |  Trip  |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  |  Count | Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+--------+----------+
+        |- Loop 1  |    0|   56|         1|          -|          -| 0 ~ 56 |    no    |
+        |- Loop 2  |    0|    8|         1|          -|          -|  0 ~ 8 |    no    |
+        +----------+-----+-----+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 114
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 57 
+2 --> 3 2 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 58 
+57 --> 57 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 74 
+74 --> 75 
+75 --> 76 
+76 --> 77 
+77 --> 78 
+78 --> 79 
+79 --> 80 
+80 --> 81 
+81 --> 82 
+82 --> 83 
+83 --> 84 
+84 --> 85 
+85 --> 86 
+86 --> 87 
+87 --> 88 
+88 --> 89 
+89 --> 90 
+90 --> 91 
+91 --> 92 
+92 --> 93 
+93 --> 94 
+94 --> 95 
+95 --> 96 
+96 --> 97 
+97 --> 98 
+98 --> 99 
+99 --> 100 
+100 --> 101 
+101 --> 102 
+102 --> 103 
+103 --> 104 
+104 --> 105 
+105 --> 106 
+106 --> 107 
+107 --> 108 
+108 --> 109 
+109 --> 110 
+110 --> 111 
+111 --> 112 
+112 --> 113 
+113 --> 114 
+114 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.22>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%p_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read10)" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 115 'read' 'p_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%p_read_5 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read9)" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 116 'read' 'p_read_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%p_read_6 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read8)" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 117 'read' 'p_read_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%p_read76 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read7)" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 118 'read' 'p_read76' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%p_read65 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read6)" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 119 'read' 'p_read65' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%p_read54 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read5)" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 120 'read' 'p_read54' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%p_read43 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read4)" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 121 'read' 'p_read43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%p_read32 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read3)" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 122 'read' 'p_read32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%ctx_datalen_read_2 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %ctx_datalen_read)" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 123 'read' 'ctx_datalen_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (1.22ns)   --->   "%icmp_ln146 = icmp ult i32 %ctx_datalen_read_2, 56" [SHA_new/SHA_new/sha256_impl.c:146]   --->   Operation 124 'icmp' 'icmp_ln146' <Predicate = true> <Delay = 1.22> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "br i1 %icmp_ln146, label %hls_label_4_begin, label %hls_label_6_begin" [SHA_new/SHA_new/sha256_impl.c:146]   --->   Operation 125 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str8)" [SHA_new/SHA_new/sha256_impl.c:154]   --->   Operation 126 'specregionbegin' 'tmp_s' <Predicate = (!icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 2, i32 1, i32 1, i32 0, [1 x i8]* @p_str27) nounwind" [SHA_new/SHA_new/sha256_impl.c:155]   --->   Operation 127 'specpipeline' <Predicate = (!icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%trunc_ln156 = trunc i32 %ctx_datalen_read_2 to i2" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 128 'trunc' 'trunc_ln156' <Predicate = (!icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%lshr_ln1 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %ctx_datalen_read_2, i32 2, i32 31)" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 129 'partselect' 'lshr_ln1' <Predicate = (!icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%zext_ln156 = zext i30 %lshr_ln1 to i64" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 130 'zext' 'zext_ln156' <Predicate = (!icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_1 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 %zext_ln156" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 131 'getelementptr' 'ctx_data_0_addr_1' <Predicate = (!icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_1 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 %zext_ln156" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 132 'getelementptr' 'ctx_data_1_addr_1' <Predicate = (!icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_1 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 %zext_ln156" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 133 'getelementptr' 'ctx_data_2_addr_1' <Predicate = (!icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_1 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 %zext_ln156" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 134 'getelementptr' 'ctx_data_3_addr_1' <Predicate = (!icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (1.03ns)   --->   "switch i2 %trunc_ln156, label %branch7 [
+    i2 0, label %branch4
+    i2 1, label %branch5
+    i2 -2, label %branch6
+  ]" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 135 'switch' <Predicate = (!icmp_ln146)> <Delay = 1.03>
+ST_1 : Operation 136 [1/1] (0.85ns)   --->   "store i8 -128, i8* %ctx_data_2_addr_1, align 1" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 136 'store' <Predicate = (!icmp_ln146 & trunc_ln156 == 2)> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "br label %3" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 137 'br' <Predicate = (!icmp_ln146 & trunc_ln156 == 2)> <Delay = 0.00>
+ST_1 : Operation 138 [1/1] (0.85ns)   --->   "store i8 -128, i8* %ctx_data_1_addr_1, align 1" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 138 'store' <Predicate = (!icmp_ln146 & trunc_ln156 == 1)> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "br label %3" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 139 'br' <Predicate = (!icmp_ln146 & trunc_ln156 == 1)> <Delay = 0.00>
+ST_1 : Operation 140 [1/1] (0.85ns)   --->   "store i8 -128, i8* %ctx_data_0_addr_1, align 1" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 140 'store' <Predicate = (!icmp_ln146 & trunc_ln156 == 0)> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "br label %3" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 141 'br' <Predicate = (!icmp_ln146 & trunc_ln156 == 0)> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.85ns)   --->   "store i8 -128, i8* %ctx_data_3_addr_1, align 1" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 142 'store' <Predicate = (!icmp_ln146 & trunc_ln156 == 3)> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "br label %3" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 143 'br' <Predicate = (!icmp_ln146 & trunc_ln156 == 3)> <Delay = 0.00>
+ST_1 : Operation 144 [1/1] (1.02ns)   --->   "br label %4" [SHA_new/SHA_new/sha256_impl.c:157]   --->   Operation 144 'br' <Predicate = (!icmp_ln146)> <Delay = 1.02>
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str6)" [SHA_new/SHA_new/sha256_impl.c:146]   --->   Operation 145 'specregionbegin' 'tmp' <Predicate = (icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 146 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 2, i32 1, i32 1, i32 0, [1 x i8]* @p_str27) nounwind" [SHA_new/SHA_new/sha256_impl.c:147]   --->   Operation 146 'specpipeline' <Predicate = (icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%trunc_ln148 = trunc i32 %ctx_datalen_read_2 to i2" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 147 'trunc' 'trunc_ln148' <Predicate = (icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 148 [1/1] (0.00ns)   --->   "%lshr_ln = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %ctx_datalen_read_2, i32 2, i32 31)" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 148 'partselect' 'lshr_ln' <Predicate = (icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%zext_ln148 = zext i30 %lshr_ln to i64" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 149 'zext' 'zext_ln148' <Predicate = (icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "%ctx_data_0_addr = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 %zext_ln148" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 150 'getelementptr' 'ctx_data_0_addr' <Predicate = (icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%ctx_data_1_addr = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 %zext_ln148" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 151 'getelementptr' 'ctx_data_1_addr' <Predicate = (icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "%ctx_data_2_addr = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 %zext_ln148" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 152 'getelementptr' 'ctx_data_2_addr' <Predicate = (icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%ctx_data_3_addr = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 %zext_ln148" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 153 'getelementptr' 'ctx_data_3_addr' <Predicate = (icmp_ln146)> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (1.03ns)   --->   "switch i2 %trunc_ln148, label %branch15 [
+    i2 0, label %branch12
+    i2 1, label %branch13
+    i2 -2, label %branch14
+  ]" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 154 'switch' <Predicate = (icmp_ln146)> <Delay = 1.03>
+ST_1 : Operation 155 [1/1] (0.85ns)   --->   "store i8 -128, i8* %ctx_data_2_addr, align 1" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 155 'store' <Predicate = (icmp_ln146 & trunc_ln148 == 2)> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "br label %1" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 156 'br' <Predicate = (icmp_ln146 & trunc_ln148 == 2)> <Delay = 0.00>
+ST_1 : Operation 157 [1/1] (0.85ns)   --->   "store i8 -128, i8* %ctx_data_1_addr, align 1" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 157 'store' <Predicate = (icmp_ln146 & trunc_ln148 == 1)> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "br label %1" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 158 'br' <Predicate = (icmp_ln146 & trunc_ln148 == 1)> <Delay = 0.00>
+ST_1 : Operation 159 [1/1] (0.85ns)   --->   "store i8 -128, i8* %ctx_data_0_addr, align 1" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 159 'store' <Predicate = (icmp_ln146 & trunc_ln148 == 0)> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "br label %1" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 160 'br' <Predicate = (icmp_ln146 & trunc_ln148 == 0)> <Delay = 0.00>
+ST_1 : Operation 161 [1/1] (0.85ns)   --->   "store i8 -128, i8* %ctx_data_3_addr, align 1" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 161 'store' <Predicate = (icmp_ln146 & trunc_ln148 == 3)> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "br label %1" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 162 'br' <Predicate = (icmp_ln146 & trunc_ln148 == 3)> <Delay = 0.00>
+ST_1 : Operation 163 [1/1] (1.02ns)   --->   "br label %2" [SHA_new/SHA_new/sha256_impl.c:149]   --->   Operation 163 'br' <Predicate = (icmp_ln146)> <Delay = 1.02>
+
+State 2 <SV = 1> <Delay = 2.84>
+ST_2 : Operation 164 [1/1] (0.00ns)   --->   "%i_1_in = phi i32 [ %ctx_datalen_read_2, %3 ], [ %i_1, %hls_label_7_end ]"   --->   Operation 164 'phi' 'i_1_in' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 165 [1/1] (1.64ns)   --->   "%i_1 = add i32 %i_1_in, 1" [SHA_new/SHA_new/sha256_impl.c:156]   --->   Operation 165 'add' 'i_1' <Predicate = true> <Delay = 1.64> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.64> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 166 [1/1] (0.00ns)   --->   "%tmp_1 = call i26 @_ssdm_op_PartSelect.i26.i32.i32.i32(i32 %i_1, i32 6, i32 31)" [SHA_new/SHA_new/sha256_impl.c:157]   --->   Operation 166 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 167 [1/1] (1.20ns)   --->   "%icmp_ln157 = icmp eq i26 %tmp_1, 0" [SHA_new/SHA_new/sha256_impl.c:157]   --->   Operation 167 'icmp' 'icmp_ln157' <Predicate = true> <Delay = 1.20> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 168 [1/1] (0.00ns)   --->   "br i1 %icmp_ln157, label %hls_label_7_begin, label %hls_label_6_end" [SHA_new/SHA_new/sha256_impl.c:157]   --->   Operation 168 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 169 [1/1] (0.00ns)   --->   "%tmp_53 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str9)" [SHA_new/SHA_new/sha256_impl.c:157]   --->   Operation 169 'specregionbegin' 'tmp_53' <Predicate = (icmp_ln157)> <Delay = 0.00>
+ST_2 : Operation 170 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 0, i32 8, i32 4, [1 x i8]* @p_str27) nounwind" [SHA_new/SHA_new/sha256_impl.c:158]   --->   Operation 170 'speclooptripcount' <Predicate = (icmp_ln157)> <Delay = 0.00>
+ST_2 : Operation 171 [1/1] (0.00ns)   --->   "%trunc_ln159 = trunc i32 %i_1_in to i2" [SHA_new/SHA_new/sha256_impl.c:159]   --->   Operation 171 'trunc' 'trunc_ln159' <Predicate = (icmp_ln157)> <Delay = 0.00>
+ST_2 : Operation 172 [1/1] (0.00ns)   --->   "%lshr_ln3 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %i_1, i32 2, i32 31)" [SHA_new/SHA_new/sha256_impl.c:159]   --->   Operation 172 'partselect' 'lshr_ln3' <Predicate = (icmp_ln157)> <Delay = 0.00>
+ST_2 : Operation 173 [1/1] (0.00ns)   --->   "%zext_ln159 = zext i30 %lshr_ln3 to i64" [SHA_new/SHA_new/sha256_impl.c:159]   --->   Operation 173 'zext' 'zext_ln159' <Predicate = (icmp_ln157)> <Delay = 0.00>
+ST_2 : Operation 174 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_3 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 %zext_ln159" [SHA_new/SHA_new/sha256_impl.c:159]   --->   Operation 174 'getelementptr' 'ctx_data_1_addr_3' <Predicate = (icmp_ln157)> <Delay = 0.00>
+ST_2 : Operation 175 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_3 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 %zext_ln159" [SHA_new/SHA_new/sha256_impl.c:159]   --->   Operation 175 'getelementptr' 'ctx_data_2_addr_3' <Predicate = (icmp_ln157)> <Delay = 0.00>
+ST_2 : Operation 176 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_3 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 %zext_ln159" [SHA_new/SHA_new/sha256_impl.c:159]   --->   Operation 176 'getelementptr' 'ctx_data_3_addr_3' <Predicate = (icmp_ln157)> <Delay = 0.00>
+ST_2 : Operation 177 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_3 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 %zext_ln159" [SHA_new/SHA_new/sha256_impl.c:159]   --->   Operation 177 'getelementptr' 'ctx_data_0_addr_3' <Predicate = (icmp_ln157)> <Delay = 0.00>
+ST_2 : Operation 178 [1/1] (1.03ns)   --->   "switch i2 %trunc_ln159, label %branch3 [
+    i2 0, label %branch0
+    i2 1, label %branch1
+    i2 -2, label %branch2
+  ]" [SHA_new/SHA_new/sha256_impl.c:159]   --->   Operation 178 'switch' <Predicate = (icmp_ln157)> <Delay = 1.03>
+ST_2 : Operation 179 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_3, align 1" [SHA_new/SHA_new/sha256_impl.c:159]   --->   Operation 179 'store' <Predicate = (icmp_ln157 & trunc_ln159 == 2)> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 180 [1/1] (0.00ns)   --->   "br label %hls_label_7_end" [SHA_new/SHA_new/sha256_impl.c:159]   --->   Operation 180 'br' <Predicate = (icmp_ln157 & trunc_ln159 == 2)> <Delay = 0.00>
+ST_2 : Operation 181 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_3, align 1" [SHA_new/SHA_new/sha256_impl.c:159]   --->   Operation 181 'store' <Predicate = (icmp_ln157 & trunc_ln159 == 1)> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 182 [1/1] (0.00ns)   --->   "br label %hls_label_7_end" [SHA_new/SHA_new/sha256_impl.c:159]   --->   Operation 182 'br' <Predicate = (icmp_ln157 & trunc_ln159 == 1)> <Delay = 0.00>
+ST_2 : Operation 183 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_3, align 1" [SHA_new/SHA_new/sha256_impl.c:159]   --->   Operation 183 'store' <Predicate = (icmp_ln157 & trunc_ln159 == 0)> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 184 [1/1] (0.00ns)   --->   "br label %hls_label_7_end" [SHA_new/SHA_new/sha256_impl.c:159]   --->   Operation 184 'br' <Predicate = (icmp_ln157 & trunc_ln159 == 0)> <Delay = 0.00>
+ST_2 : Operation 185 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_3, align 1" [SHA_new/SHA_new/sha256_impl.c:159]   --->   Operation 185 'store' <Predicate = (icmp_ln157 & trunc_ln159 == 3)> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_2 : Operation 186 [1/1] (0.00ns)   --->   "br label %hls_label_7_end" [SHA_new/SHA_new/sha256_impl.c:159]   --->   Operation 186 'br' <Predicate = (icmp_ln157 & trunc_ln159 == 3)> <Delay = 0.00>
+ST_2 : Operation 187 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str9, i32 %tmp_53)" [SHA_new/SHA_new/sha256_impl.c:160]   --->   Operation 187 'specregionend' 'empty_7' <Predicate = (icmp_ln157)> <Delay = 0.00>
+ST_2 : Operation 188 [1/1] (0.00ns)   --->   "br label %4" [SHA_new/SHA_new/sha256_impl.c:160]   --->   Operation 188 'br' <Predicate = (icmp_ln157)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 0.00>
+
+State 8 <SV = 7> <Delay = 0.00>
+
+State 9 <SV = 8> <Delay = 7.09>
+ST_9 : Operation 189 [41/41] (7.09ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 189 'call' 'call_ret' <Predicate = true> <Delay = 7.09> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 8.75>
+ST_10 : Operation 190 [40/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 190 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 8.75>
+ST_11 : Operation 191 [39/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 191 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 8.75>
+ST_12 : Operation 192 [38/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 192 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 8.75>
+ST_13 : Operation 193 [37/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 193 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 8.75>
+ST_14 : Operation 194 [36/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 194 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 8.75>
+ST_15 : Operation 195 [35/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 195 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 8.75>
+ST_16 : Operation 196 [34/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 196 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 16> <Delay = 8.75>
+ST_17 : Operation 197 [33/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 197 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 8.75>
+ST_18 : Operation 198 [32/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 198 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 18> <Delay = 8.75>
+ST_19 : Operation 199 [31/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 199 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 8.75>
+ST_20 : Operation 200 [30/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 200 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 21 <SV = 20> <Delay = 8.75>
+ST_21 : Operation 201 [29/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 201 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 21> <Delay = 8.75>
+ST_22 : Operation 202 [28/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 202 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 22> <Delay = 8.75>
+ST_23 : Operation 203 [27/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 203 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 23> <Delay = 8.75>
+ST_24 : Operation 204 [26/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 204 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 24> <Delay = 8.75>
+ST_25 : Operation 205 [25/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 205 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 26 <SV = 25> <Delay = 8.75>
+ST_26 : Operation 206 [24/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 206 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 27 <SV = 26> <Delay = 8.75>
+ST_27 : Operation 207 [23/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 207 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 28 <SV = 27> <Delay = 8.75>
+ST_28 : Operation 208 [22/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 208 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 29 <SV = 28> <Delay = 8.75>
+ST_29 : Operation 209 [21/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 209 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 30 <SV = 29> <Delay = 8.75>
+ST_30 : Operation 210 [20/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 210 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 31 <SV = 30> <Delay = 8.75>
+ST_31 : Operation 211 [19/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 211 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 32 <SV = 31> <Delay = 8.75>
+ST_32 : Operation 212 [18/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 212 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 33 <SV = 32> <Delay = 8.75>
+ST_33 : Operation 213 [17/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 213 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 34 <SV = 33> <Delay = 8.75>
+ST_34 : Operation 214 [16/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 214 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 35 <SV = 34> <Delay = 8.75>
+ST_35 : Operation 215 [15/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 215 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 36 <SV = 35> <Delay = 8.75>
+ST_36 : Operation 216 [14/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 216 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 37 <SV = 36> <Delay = 8.75>
+ST_37 : Operation 217 [13/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 217 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 38 <SV = 37> <Delay = 8.75>
+ST_38 : Operation 218 [12/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 218 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 39 <SV = 38> <Delay = 8.75>
+ST_39 : Operation 219 [11/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 219 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 40 <SV = 39> <Delay = 8.75>
+ST_40 : Operation 220 [10/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 220 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 41 <SV = 40> <Delay = 8.75>
+ST_41 : Operation 221 [9/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 221 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 42 <SV = 41> <Delay = 8.75>
+ST_42 : Operation 222 [8/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 222 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 43 <SV = 42> <Delay = 8.75>
+ST_43 : Operation 223 [7/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 223 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 44 <SV = 43> <Delay = 8.75>
+ST_44 : Operation 224 [6/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 224 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 45 <SV = 44> <Delay = 8.75>
+ST_45 : Operation 225 [5/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 225 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 46 <SV = 45> <Delay = 8.75>
+ST_46 : Operation 226 [4/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 226 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 47 <SV = 46> <Delay = 8.75>
+ST_47 : Operation 227 [3/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 227 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 48 <SV = 47> <Delay = 8.75>
+ST_48 : Operation 228 [2/41] (8.75ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 228 'call' 'call_ret' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 49 <SV = 48> <Delay = 1.31>
+ST_49 : Operation 229 [1/41] (1.31ns)   --->   "%call_ret = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %p_read32, i32 %p_read43, i32 %p_read54, i32 %p_read65, i32 %p_read76, i32 %p_read_6, i32 %p_read_5, i32 %p_read, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 229 'call' 'call_ret' <Predicate = true> <Delay = 1.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_49 : Operation 230 [1/1] (0.00ns)   --->   "%ctx_state_0_ret1 = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret, 0" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 230 'extractvalue' 'ctx_state_0_ret1' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 231 [1/1] (0.00ns)   --->   "%ctx_state_1_ret1 = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret, 1" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 231 'extractvalue' 'ctx_state_1_ret1' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 232 [1/1] (0.00ns)   --->   "%ctx_state_2_ret1 = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret, 2" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 232 'extractvalue' 'ctx_state_2_ret1' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 233 [1/1] (0.00ns)   --->   "%ctx_state_3_ret1 = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret, 3" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 233 'extractvalue' 'ctx_state_3_ret1' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 234 [1/1] (0.00ns)   --->   "%ctx_state_4_ret1 = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret, 4" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 234 'extractvalue' 'ctx_state_4_ret1' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 235 [1/1] (0.00ns)   --->   "%ctx_state_5_ret1 = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret, 5" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 235 'extractvalue' 'ctx_state_5_ret1' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 236 [1/1] (0.00ns)   --->   "%ctx_state_6_ret1 = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret, 6" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 236 'extractvalue' 'ctx_state_6_ret1' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 237 [1/1] (0.00ns)   --->   "%ctx_state_7_ret1 = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret, 7" [SHA_new/SHA_new/sha256_impl.c:161]   --->   Operation 237 'extractvalue' 'ctx_state_7_ret1' <Predicate = true> <Delay = 0.00>
+
+State 50 <SV = 49> <Delay = 0.85>
+ST_50 : Operation 238 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_4 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 0" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 238 'getelementptr' 'ctx_data_0_addr_4' <Predicate = true> <Delay = 0.00>
+ST_50 : Operation 239 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_4, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 239 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_50 : Operation 240 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_4 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 0" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 240 'getelementptr' 'ctx_data_1_addr_4' <Predicate = true> <Delay = 0.00>
+ST_50 : Operation 241 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_4, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 241 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_50 : Operation 242 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_4 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 0" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 242 'getelementptr' 'ctx_data_2_addr_4' <Predicate = true> <Delay = 0.00>
+ST_50 : Operation 243 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_4, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 243 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_50 : Operation 244 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_4 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 0" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 244 'getelementptr' 'ctx_data_3_addr_4' <Predicate = true> <Delay = 0.00>
+ST_50 : Operation 245 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_4, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 245 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_50 : Operation 246 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_5 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 246 'getelementptr' 'ctx_data_0_addr_5' <Predicate = true> <Delay = 0.00>
+ST_50 : Operation 247 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_5, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 247 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_50 : Operation 248 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_5 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 248 'getelementptr' 'ctx_data_1_addr_5' <Predicate = true> <Delay = 0.00>
+ST_50 : Operation 249 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_5, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 249 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_50 : Operation 250 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_5 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 250 'getelementptr' 'ctx_data_2_addr_5' <Predicate = true> <Delay = 0.00>
+ST_50 : Operation 251 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_5, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 251 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_50 : Operation 252 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_5 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 252 'getelementptr' 'ctx_data_3_addr_5' <Predicate = true> <Delay = 0.00>
+ST_50 : Operation 253 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_5, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 253 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 51 <SV = 50> <Delay = 0.85>
+ST_51 : Operation 254 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_6 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 2" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 254 'getelementptr' 'ctx_data_0_addr_6' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 255 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_6, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 255 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_51 : Operation 256 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_6 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 2" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 256 'getelementptr' 'ctx_data_1_addr_6' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 257 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_6, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 257 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_51 : Operation 258 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_6 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 2" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 258 'getelementptr' 'ctx_data_2_addr_6' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 259 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_6, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 259 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_51 : Operation 260 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_6 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 2" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 260 'getelementptr' 'ctx_data_3_addr_6' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 261 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_6, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 261 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_51 : Operation 262 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_7 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 3" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 262 'getelementptr' 'ctx_data_0_addr_7' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 263 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_7, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 263 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_51 : Operation 264 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_7 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 3" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 264 'getelementptr' 'ctx_data_1_addr_7' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 265 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_7, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 265 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_51 : Operation 266 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_7 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 3" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 266 'getelementptr' 'ctx_data_2_addr_7' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 267 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_7, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 267 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_51 : Operation 268 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_7 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 3" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 268 'getelementptr' 'ctx_data_3_addr_7' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 269 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_7, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 269 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 52 <SV = 51> <Delay = 0.85>
+ST_52 : Operation 270 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_8 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 4" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 270 'getelementptr' 'ctx_data_0_addr_8' <Predicate = true> <Delay = 0.00>
+ST_52 : Operation 271 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_8, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 271 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_52 : Operation 272 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_8 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 4" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 272 'getelementptr' 'ctx_data_1_addr_8' <Predicate = true> <Delay = 0.00>
+ST_52 : Operation 273 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_8, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 273 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_52 : Operation 274 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_8 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 4" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 274 'getelementptr' 'ctx_data_2_addr_8' <Predicate = true> <Delay = 0.00>
+ST_52 : Operation 275 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_8, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 275 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_52 : Operation 276 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_8 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 4" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 276 'getelementptr' 'ctx_data_3_addr_8' <Predicate = true> <Delay = 0.00>
+ST_52 : Operation 277 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_8, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 277 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_52 : Operation 278 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_9 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 5" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 278 'getelementptr' 'ctx_data_0_addr_9' <Predicate = true> <Delay = 0.00>
+ST_52 : Operation 279 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_9, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 279 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_52 : Operation 280 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_9 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 5" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 280 'getelementptr' 'ctx_data_1_addr_9' <Predicate = true> <Delay = 0.00>
+ST_52 : Operation 281 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_9, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 281 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_52 : Operation 282 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_9 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 5" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 282 'getelementptr' 'ctx_data_2_addr_9' <Predicate = true> <Delay = 0.00>
+ST_52 : Operation 283 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_9, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 283 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_52 : Operation 284 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_9 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 5" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 284 'getelementptr' 'ctx_data_3_addr_9' <Predicate = true> <Delay = 0.00>
+ST_52 : Operation 285 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_9, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 285 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 53 <SV = 52> <Delay = 0.85>
+ST_53 : Operation 286 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_10 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 6" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 286 'getelementptr' 'ctx_data_0_addr_10' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 287 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_10, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 287 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_53 : Operation 288 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_10 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 6" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 288 'getelementptr' 'ctx_data_1_addr_10' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 289 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_10, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 289 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_53 : Operation 290 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_10 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 6" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 290 'getelementptr' 'ctx_data_2_addr_10' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 291 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_10, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 291 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_53 : Operation 292 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_10 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 6" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 292 'getelementptr' 'ctx_data_3_addr_10' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 293 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_10, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 293 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_53 : Operation 294 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_11 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 7" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 294 'getelementptr' 'ctx_data_0_addr_11' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 295 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_11, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 295 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_53 : Operation 296 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_11 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 7" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 296 'getelementptr' 'ctx_data_1_addr_11' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 297 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_11, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 297 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_53 : Operation 298 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_11 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 7" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 298 'getelementptr' 'ctx_data_2_addr_11' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 299 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_11, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 299 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_53 : Operation 300 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_11 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 7" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 300 'getelementptr' 'ctx_data_3_addr_11' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 301 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_11, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 301 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 54 <SV = 53> <Delay = 0.85>
+ST_54 : Operation 302 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_12 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 8" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 302 'getelementptr' 'ctx_data_0_addr_12' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 303 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_12, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 303 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_54 : Operation 304 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_12 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 8" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 304 'getelementptr' 'ctx_data_1_addr_12' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 305 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_12, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 305 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_54 : Operation 306 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_12 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 8" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 306 'getelementptr' 'ctx_data_2_addr_12' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 307 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_12, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 307 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_54 : Operation 308 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_12 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 8" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 308 'getelementptr' 'ctx_data_3_addr_12' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 309 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_12, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 309 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_54 : Operation 310 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_13 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 9" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 310 'getelementptr' 'ctx_data_0_addr_13' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 311 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_13, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 311 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_54 : Operation 312 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_13 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 9" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 312 'getelementptr' 'ctx_data_1_addr_13' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 313 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_13, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 313 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_54 : Operation 314 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_13 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 9" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 314 'getelementptr' 'ctx_data_2_addr_13' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 315 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_13, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 315 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_54 : Operation 316 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_13 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 9" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 316 'getelementptr' 'ctx_data_3_addr_13' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 317 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_13, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 317 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 55 <SV = 54> <Delay = 0.85>
+ST_55 : Operation 318 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_14 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 10" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 318 'getelementptr' 'ctx_data_0_addr_14' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 319 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_14, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 319 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_55 : Operation 320 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_14 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 10" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 320 'getelementptr' 'ctx_data_1_addr_14' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 321 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_14, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 321 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_55 : Operation 322 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_14 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 10" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 322 'getelementptr' 'ctx_data_2_addr_14' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 323 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_14, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 323 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_55 : Operation 324 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_14 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 10" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 324 'getelementptr' 'ctx_data_3_addr_14' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 325 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_14, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 325 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_55 : Operation 326 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_15 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 11" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 326 'getelementptr' 'ctx_data_0_addr_15' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 327 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_15, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 327 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_55 : Operation 328 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_15 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 11" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 328 'getelementptr' 'ctx_data_1_addr_15' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 329 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_15, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 329 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_55 : Operation 330 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_15 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 11" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 330 'getelementptr' 'ctx_data_2_addr_15' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 331 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_15, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 331 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_55 : Operation 332 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_15 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 11" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 332 'getelementptr' 'ctx_data_3_addr_15' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 333 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_15, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 333 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 56 <SV = 55> <Delay = 1.02>
+ST_56 : Operation 334 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_16 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 12" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 334 'getelementptr' 'ctx_data_0_addr_16' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 335 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_16, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 335 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_56 : Operation 336 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_16 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 12" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 336 'getelementptr' 'ctx_data_1_addr_16' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 337 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_16, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 337 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_56 : Operation 338 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_16 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 12" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 338 'getelementptr' 'ctx_data_2_addr_16' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 339 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_16, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 339 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_56 : Operation 340 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_16 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 12" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 340 'getelementptr' 'ctx_data_3_addr_16' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 341 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_16, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 341 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_56 : Operation 342 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_17 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 13" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 342 'getelementptr' 'ctx_data_0_addr_17' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 343 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_17, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 343 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_56 : Operation 344 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_17 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 13" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 344 'getelementptr' 'ctx_data_1_addr_17' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 345 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_17, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 345 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_56 : Operation 346 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_17 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 13" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 346 'getelementptr' 'ctx_data_2_addr_17' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 347 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_17, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 347 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_56 : Operation 348 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_17 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 13" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 348 'getelementptr' 'ctx_data_3_addr_17' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 349 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_17, align 1" [SHA_new/SHA_new/sha256_impl.c:164]   --->   Operation 349 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_56 : Operation 350 [1/1] (0.00ns)   --->   "%empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str8, i32 %tmp_s)" [SHA_new/SHA_new/sha256_impl.c:166]   --->   Operation 350 'specregionend' 'empty_8' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 351 [1/1] (1.02ns)   --->   "br label %5"   --->   Operation 351 'br' <Predicate = true> <Delay = 1.02>
+
+State 57 <SV = 1> <Delay = 2.50>
+ST_57 : Operation 352 [1/1] (0.00ns)   --->   "%i_0_in = phi i32 [ %ctx_datalen_read_2, %1 ], [ %i, %hls_label_5_end ]"   --->   Operation 352 'phi' 'i_0_in' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 353 [1/1] (1.64ns)   --->   "%i = add i32 %i_0_in, 1" [SHA_new/SHA_new/sha256_impl.c:148]   --->   Operation 353 'add' 'i' <Predicate = true> <Delay = 1.64> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.64> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 354 [1/1] (1.22ns)   --->   "%icmp_ln149 = icmp eq i32 %i_0_in, 55" [SHA_new/SHA_new/sha256_impl.c:149]   --->   Operation 354 'icmp' 'icmp_ln149' <Predicate = true> <Delay = 1.22> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 355 [1/1] (0.00ns)   --->   "br i1 %icmp_ln149, label %hls_label_4_end, label %hls_label_5_begin" [SHA_new/SHA_new/sha256_impl.c:149]   --->   Operation 355 'br' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 356 [1/1] (0.00ns)   --->   "%tmp_52 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str7)" [SHA_new/SHA_new/sha256_impl.c:149]   --->   Operation 356 'specregionbegin' 'tmp_52' <Predicate = (!icmp_ln149)> <Delay = 0.00>
+ST_57 : Operation 357 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 0, i32 56, i32 28, [1 x i8]* @p_str27) nounwind" [SHA_new/SHA_new/sha256_impl.c:150]   --->   Operation 357 'speclooptripcount' <Predicate = (!icmp_ln149)> <Delay = 0.00>
+ST_57 : Operation 358 [1/1] (0.00ns)   --->   "%trunc_ln151 = trunc i32 %i_0_in to i2" [SHA_new/SHA_new/sha256_impl.c:151]   --->   Operation 358 'trunc' 'trunc_ln151' <Predicate = (!icmp_ln149)> <Delay = 0.00>
+ST_57 : Operation 359 [1/1] (0.00ns)   --->   "%lshr_ln2 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %i, i32 2, i32 31)" [SHA_new/SHA_new/sha256_impl.c:151]   --->   Operation 359 'partselect' 'lshr_ln2' <Predicate = (!icmp_ln149)> <Delay = 0.00>
+ST_57 : Operation 360 [1/1] (0.00ns)   --->   "%zext_ln151 = zext i30 %lshr_ln2 to i64" [SHA_new/SHA_new/sha256_impl.c:151]   --->   Operation 360 'zext' 'zext_ln151' <Predicate = (!icmp_ln149)> <Delay = 0.00>
+ST_57 : Operation 361 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_2 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 %zext_ln151" [SHA_new/SHA_new/sha256_impl.c:151]   --->   Operation 361 'getelementptr' 'ctx_data_1_addr_2' <Predicate = (!icmp_ln149)> <Delay = 0.00>
+ST_57 : Operation 362 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_2 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 %zext_ln151" [SHA_new/SHA_new/sha256_impl.c:151]   --->   Operation 362 'getelementptr' 'ctx_data_2_addr_2' <Predicate = (!icmp_ln149)> <Delay = 0.00>
+ST_57 : Operation 363 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_2 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 %zext_ln151" [SHA_new/SHA_new/sha256_impl.c:151]   --->   Operation 363 'getelementptr' 'ctx_data_3_addr_2' <Predicate = (!icmp_ln149)> <Delay = 0.00>
+ST_57 : Operation 364 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_2 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 %zext_ln151" [SHA_new/SHA_new/sha256_impl.c:151]   --->   Operation 364 'getelementptr' 'ctx_data_0_addr_2' <Predicate = (!icmp_ln149)> <Delay = 0.00>
+ST_57 : Operation 365 [1/1] (1.03ns)   --->   "switch i2 %trunc_ln151, label %branch11 [
+    i2 0, label %branch8
+    i2 1, label %branch9
+    i2 -2, label %branch10
+  ]" [SHA_new/SHA_new/sha256_impl.c:151]   --->   Operation 365 'switch' <Predicate = (!icmp_ln149)> <Delay = 1.03>
+ST_57 : Operation 366 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_2, align 1" [SHA_new/SHA_new/sha256_impl.c:151]   --->   Operation 366 'store' <Predicate = (!icmp_ln149 & trunc_ln151 == 2)> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_57 : Operation 367 [1/1] (0.00ns)   --->   "br label %hls_label_5_end" [SHA_new/SHA_new/sha256_impl.c:151]   --->   Operation 367 'br' <Predicate = (!icmp_ln149 & trunc_ln151 == 2)> <Delay = 0.00>
+ST_57 : Operation 368 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_2, align 1" [SHA_new/SHA_new/sha256_impl.c:151]   --->   Operation 368 'store' <Predicate = (!icmp_ln149 & trunc_ln151 == 1)> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_57 : Operation 369 [1/1] (0.00ns)   --->   "br label %hls_label_5_end" [SHA_new/SHA_new/sha256_impl.c:151]   --->   Operation 369 'br' <Predicate = (!icmp_ln149 & trunc_ln151 == 1)> <Delay = 0.00>
+ST_57 : Operation 370 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_2, align 1" [SHA_new/SHA_new/sha256_impl.c:151]   --->   Operation 370 'store' <Predicate = (!icmp_ln149 & trunc_ln151 == 0)> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_57 : Operation 371 [1/1] (0.00ns)   --->   "br label %hls_label_5_end" [SHA_new/SHA_new/sha256_impl.c:151]   --->   Operation 371 'br' <Predicate = (!icmp_ln149 & trunc_ln151 == 0)> <Delay = 0.00>
+ST_57 : Operation 372 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_2, align 1" [SHA_new/SHA_new/sha256_impl.c:151]   --->   Operation 372 'store' <Predicate = (!icmp_ln149 & trunc_ln151 == 3)> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_57 : Operation 373 [1/1] (0.00ns)   --->   "br label %hls_label_5_end" [SHA_new/SHA_new/sha256_impl.c:151]   --->   Operation 373 'br' <Predicate = (!icmp_ln149 & trunc_ln151 == 3)> <Delay = 0.00>
+ST_57 : Operation 374 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str7, i32 %tmp_52)" [SHA_new/SHA_new/sha256_impl.c:152]   --->   Operation 374 'specregionend' 'empty' <Predicate = (!icmp_ln149)> <Delay = 0.00>
+ST_57 : Operation 375 [1/1] (0.00ns)   --->   "br label %2" [SHA_new/SHA_new/sha256_impl.c:152]   --->   Operation 375 'br' <Predicate = (!icmp_ln149)> <Delay = 0.00>
+ST_57 : Operation 376 [1/1] (0.00ns)   --->   "%empty_6 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str6, i32 %tmp)" [SHA_new/SHA_new/sha256_impl.c:153]   --->   Operation 376 'specregionend' 'empty_6' <Predicate = (icmp_ln149)> <Delay = 0.00>
+ST_57 : Operation 377 [1/1] (1.02ns)   --->   "br label %5" [SHA_new/SHA_new/sha256_impl.c:153]   --->   Operation 377 'br' <Predicate = (icmp_ln149)> <Delay = 1.02>
+
+State 58 <SV = 56> <Delay = 0.85>
+ST_58 : Operation 378 [1/1] (0.00ns)   --->   "%ctx_state_0_0 = phi i32 [ %p_read32, %hls_label_4_end ], [ %ctx_state_0_ret1, %hls_label_6_end ]" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 378 'phi' 'ctx_state_0_0' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 379 [1/1] (0.00ns)   --->   "%ctx_state_1_0 = phi i32 [ %p_read43, %hls_label_4_end ], [ %ctx_state_1_ret1, %hls_label_6_end ]" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 379 'phi' 'ctx_state_1_0' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 380 [1/1] (0.00ns)   --->   "%ctx_state_2_0 = phi i32 [ %p_read54, %hls_label_4_end ], [ %ctx_state_2_ret1, %hls_label_6_end ]" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 380 'phi' 'ctx_state_2_0' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 381 [1/1] (0.00ns)   --->   "%ctx_state_3_0 = phi i32 [ %p_read65, %hls_label_4_end ], [ %ctx_state_3_ret1, %hls_label_6_end ]" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 381 'phi' 'ctx_state_3_0' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 382 [1/1] (0.00ns)   --->   "%ctx_state_4_0 = phi i32 [ %p_read76, %hls_label_4_end ], [ %ctx_state_4_ret1, %hls_label_6_end ]" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 382 'phi' 'ctx_state_4_0' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 383 [1/1] (0.00ns)   --->   "%ctx_state_5_0 = phi i32 [ %p_read_6, %hls_label_4_end ], [ %ctx_state_5_ret1, %hls_label_6_end ]" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 383 'phi' 'ctx_state_5_0' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 384 [1/1] (0.00ns)   --->   "%ctx_state_6_0 = phi i32 [ %p_read_5, %hls_label_4_end ], [ %ctx_state_6_ret1, %hls_label_6_end ]" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 384 'phi' 'ctx_state_6_0' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 385 [1/1] (0.00ns)   --->   "%ctx_state_7_0 = phi i32 [ %p_read, %hls_label_4_end ], [ %ctx_state_7_ret1, %hls_label_6_end ]" [SHA_new/SHA_new/sha256_impl.c:139]   --->   Operation 385 'phi' 'ctx_state_7_0' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 386 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_18 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 15" [SHA_new/SHA_new/sha256_impl.c:171]   --->   Operation 386 'getelementptr' 'ctx_data_3_addr_18' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 387 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_18, align 1" [SHA_new/SHA_new/sha256_impl.c:171]   --->   Operation 387 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_58 : Operation 388 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_18 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 15" [SHA_new/SHA_new/sha256_impl.c:172]   --->   Operation 388 'getelementptr' 'ctx_data_2_addr_18' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 389 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_18, align 1" [SHA_new/SHA_new/sha256_impl.c:172]   --->   Operation 389 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_58 : Operation 390 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_18 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 15" [SHA_new/SHA_new/sha256_impl.c:173]   --->   Operation 390 'getelementptr' 'ctx_data_1_addr_18' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 391 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_18, align 1" [SHA_new/SHA_new/sha256_impl.c:173]   --->   Operation 391 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_58 : Operation 392 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_18 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 15" [SHA_new/SHA_new/sha256_impl.c:174]   --->   Operation 392 'getelementptr' 'ctx_data_0_addr_18' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 393 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_18, align 1" [SHA_new/SHA_new/sha256_impl.c:174]   --->   Operation 393 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_58 : Operation 394 [1/1] (0.00ns)   --->   "%ctx_data_3_addr_19 = getelementptr [16 x i8]* %ctx_data_3, i64 0, i64 14" [SHA_new/SHA_new/sha256_impl.c:175]   --->   Operation 394 'getelementptr' 'ctx_data_3_addr_19' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 395 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_3_addr_19, align 1" [SHA_new/SHA_new/sha256_impl.c:175]   --->   Operation 395 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_58 : Operation 396 [1/1] (0.00ns)   --->   "%ctx_data_2_addr_19 = getelementptr [16 x i8]* %ctx_data_2, i64 0, i64 14" [SHA_new/SHA_new/sha256_impl.c:176]   --->   Operation 396 'getelementptr' 'ctx_data_2_addr_19' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 397 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_2_addr_19, align 1" [SHA_new/SHA_new/sha256_impl.c:176]   --->   Operation 397 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_58 : Operation 398 [1/1] (0.00ns)   --->   "%ctx_data_1_addr_19 = getelementptr [16 x i8]* %ctx_data_1, i64 0, i64 14" [SHA_new/SHA_new/sha256_impl.c:177]   --->   Operation 398 'getelementptr' 'ctx_data_1_addr_19' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 399 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_1_addr_19, align 1" [SHA_new/SHA_new/sha256_impl.c:177]   --->   Operation 399 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_58 : Operation 400 [1/1] (0.00ns)   --->   "%ctx_data_0_addr_19 = getelementptr [16 x i8]* %ctx_data_0, i64 0, i64 14" [SHA_new/SHA_new/sha256_impl.c:178]   --->   Operation 400 'getelementptr' 'ctx_data_0_addr_19' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 401 [1/1] (0.85ns)   --->   "store i8 0, i8* %ctx_data_0_addr_19, align 1" [SHA_new/SHA_new/sha256_impl.c:178]   --->   Operation 401 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 59 <SV = 57> <Delay = 7.09>
+ST_59 : Operation 402 [41/41] (7.09ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 402 'call' 'call_ret1' <Predicate = true> <Delay = 7.09> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 60 <SV = 58> <Delay = 8.75>
+ST_60 : Operation 403 [40/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 403 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 61 <SV = 59> <Delay = 8.75>
+ST_61 : Operation 404 [39/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 404 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 62 <SV = 60> <Delay = 8.75>
+ST_62 : Operation 405 [38/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 405 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 63 <SV = 61> <Delay = 8.75>
+ST_63 : Operation 406 [37/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 406 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 64 <SV = 62> <Delay = 8.75>
+ST_64 : Operation 407 [36/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 407 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 65 <SV = 63> <Delay = 8.75>
+ST_65 : Operation 408 [35/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 408 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 66 <SV = 64> <Delay = 8.75>
+ST_66 : Operation 409 [34/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 409 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 67 <SV = 65> <Delay = 8.75>
+ST_67 : Operation 410 [33/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 410 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 68 <SV = 66> <Delay = 8.75>
+ST_68 : Operation 411 [32/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 411 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 69 <SV = 67> <Delay = 8.75>
+ST_69 : Operation 412 [31/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 412 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 70 <SV = 68> <Delay = 8.75>
+ST_70 : Operation 413 [30/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 413 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 71 <SV = 69> <Delay = 8.75>
+ST_71 : Operation 414 [29/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 414 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 72 <SV = 70> <Delay = 8.75>
+ST_72 : Operation 415 [28/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 415 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 73 <SV = 71> <Delay = 8.75>
+ST_73 : Operation 416 [27/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 416 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 74 <SV = 72> <Delay = 8.75>
+ST_74 : Operation 417 [26/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 417 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 75 <SV = 73> <Delay = 8.75>
+ST_75 : Operation 418 [25/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 418 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 76 <SV = 74> <Delay = 8.75>
+ST_76 : Operation 419 [24/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 419 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 77 <SV = 75> <Delay = 8.75>
+ST_77 : Operation 420 [23/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 420 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 78 <SV = 76> <Delay = 8.75>
+ST_78 : Operation 421 [22/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 421 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 79 <SV = 77> <Delay = 8.75>
+ST_79 : Operation 422 [21/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 422 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 80 <SV = 78> <Delay = 8.75>
+ST_80 : Operation 423 [20/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 423 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 81 <SV = 79> <Delay = 8.75>
+ST_81 : Operation 424 [19/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 424 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 82 <SV = 80> <Delay = 8.75>
+ST_82 : Operation 425 [18/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 425 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 83 <SV = 81> <Delay = 8.75>
+ST_83 : Operation 426 [17/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 426 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 84 <SV = 82> <Delay = 8.75>
+ST_84 : Operation 427 [16/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 427 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 85 <SV = 83> <Delay = 8.75>
+ST_85 : Operation 428 [15/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 428 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 86 <SV = 84> <Delay = 8.75>
+ST_86 : Operation 429 [14/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 429 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 87 <SV = 85> <Delay = 8.75>
+ST_87 : Operation 430 [13/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 430 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 88 <SV = 86> <Delay = 8.75>
+ST_88 : Operation 431 [12/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 431 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 89 <SV = 87> <Delay = 8.75>
+ST_89 : Operation 432 [11/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 432 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 90 <SV = 88> <Delay = 8.75>
+ST_90 : Operation 433 [10/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 433 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 91 <SV = 89> <Delay = 8.75>
+ST_91 : Operation 434 [9/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 434 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 92 <SV = 90> <Delay = 8.75>
+ST_92 : Operation 435 [8/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 435 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 93 <SV = 91> <Delay = 8.75>
+ST_93 : Operation 436 [7/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 436 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 94 <SV = 92> <Delay = 8.75>
+ST_94 : Operation 437 [6/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 437 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 95 <SV = 93> <Delay = 8.75>
+ST_95 : Operation 438 [5/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 438 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 96 <SV = 94> <Delay = 8.75>
+ST_96 : Operation 439 [4/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 439 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 97 <SV = 95> <Delay = 8.75>
+ST_97 : Operation 440 [3/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 440 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 98 <SV = 96> <Delay = 8.75>
+ST_98 : Operation 441 [2/41] (8.75ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 441 'call' 'call_ret1' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 99 <SV = 97> <Delay = 2.17>
+ST_99 : Operation 442 [1/41] (1.31ns)   --->   "%call_ret1 = call fastcc { i32, i32, i32, i32, i32, i32, i32, i32 } @sha256_transform(i32 %ctx_state_0_0, i32 %ctx_state_1_0, i32 %ctx_state_2_0, i32 %ctx_state_3_0, i32 %ctx_state_4_0, i32 %ctx_state_5_0, i32 %ctx_state_6_0, i32 %ctx_state_7_0, [16 x i8]* %ctx_data_0, [16 x i8]* %ctx_data_1, [16 x i8]* %ctx_data_2, [16 x i8]* %ctx_data_3)" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 442 'call' 'call_ret1' <Predicate = true> <Delay = 1.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_99 : Operation 443 [1/1] (0.00ns)   --->   "%ctx_state_0_ret = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret1, 0" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 443 'extractvalue' 'ctx_state_0_ret' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 444 [1/1] (0.00ns)   --->   "%ctx_state_1_ret = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret1, 1" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 444 'extractvalue' 'ctx_state_1_ret' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 445 [1/1] (0.00ns)   --->   "%ctx_state_2_ret = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret1, 2" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 445 'extractvalue' 'ctx_state_2_ret' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 446 [1/1] (0.00ns)   --->   "%ctx_state_3_ret = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret1, 3" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 446 'extractvalue' 'ctx_state_3_ret' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 447 [1/1] (0.00ns)   --->   "%ctx_state_4_ret = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret1, 4" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 447 'extractvalue' 'ctx_state_4_ret' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 448 [1/1] (0.00ns)   --->   "%ctx_state_5_ret = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret1, 5" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 448 'extractvalue' 'ctx_state_5_ret' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 449 [1/1] (0.00ns)   --->   "%ctx_state_6_ret = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret1, 6" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 449 'extractvalue' 'ctx_state_6_ret' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 450 [1/1] (0.00ns)   --->   "%ctx_state_7_ret = extractvalue { i32, i32, i32, i32, i32, i32, i32, i32 } %call_ret1, 7" [SHA_new/SHA_new/sha256_impl.c:179]   --->   Operation 450 'extractvalue' 'ctx_state_7_ret' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 451 [1/1] (0.00ns)   --->   "%trunc_ln4 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_0_ret, i32 24, i32 31)" [SHA_new/SHA_new/sha256_impl.c:185]   --->   Operation 451 'partselect' 'trunc_ln4' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 452 [1/1] (0.00ns)   --->   "%hash_addr = getelementptr [64 x i8]* %hash, i64 0, i64 0" [SHA_new/SHA_new/sha256_impl.c:185]   --->   Operation 452 'getelementptr' 'hash_addr' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 453 [1/1] (0.85ns)   --->   "store i8 %trunc_ln4, i8* %hash_addr, align 1" [SHA_new/SHA_new/sha256_impl.c:185]   --->   Operation 453 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_99 : Operation 454 [1/1] (0.00ns)   --->   "%trunc_ln5 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_1_ret, i32 24, i32 31)" [SHA_new/SHA_new/sha256_impl.c:186]   --->   Operation 454 'partselect' 'trunc_ln5' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 455 [1/1] (0.00ns)   --->   "%hash_addr_1 = getelementptr [64 x i8]* %hash, i64 0, i64 4" [SHA_new/SHA_new/sha256_impl.c:186]   --->   Operation 455 'getelementptr' 'hash_addr_1' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 456 [1/1] (0.85ns)   --->   "store i8 %trunc_ln5, i8* %hash_addr_1, align 1" [SHA_new/SHA_new/sha256_impl.c:186]   --->   Operation 456 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_99 : Operation 457 [1/1] (0.00ns)   --->   "%trunc_ln6 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_2_ret, i32 24, i32 31)" [SHA_new/SHA_new/sha256_impl.c:187]   --->   Operation 457 'partselect' 'trunc_ln6' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 458 [1/1] (0.00ns)   --->   "%trunc_ln7 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_3_ret, i32 24, i32 31)" [SHA_new/SHA_new/sha256_impl.c:188]   --->   Operation 458 'partselect' 'trunc_ln7' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 459 [1/1] (0.00ns)   --->   "%trunc_ln8 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_4_ret, i32 24, i32 31)" [SHA_new/SHA_new/sha256_impl.c:189]   --->   Operation 459 'partselect' 'trunc_ln8' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 460 [1/1] (0.00ns)   --->   "%trunc_ln9 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_5_ret, i32 24, i32 31)" [SHA_new/SHA_new/sha256_impl.c:190]   --->   Operation 460 'partselect' 'trunc_ln9' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 461 [1/1] (0.00ns)   --->   "%trunc_ln = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_6_ret, i32 24, i32 31)" [SHA_new/SHA_new/sha256_impl.c:191]   --->   Operation 461 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 462 [1/1] (0.00ns)   --->   "%trunc_ln1 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_7_ret, i32 24, i32 31)" [SHA_new/SHA_new/sha256_impl.c:192]   --->   Operation 462 'partselect' 'trunc_ln1' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 463 [1/1] (0.00ns)   --->   "%trunc_ln185_1 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_0_ret, i32 16, i32 23)" [SHA_new/SHA_new/sha256_impl.c:185]   --->   Operation 463 'partselect' 'trunc_ln185_1' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 464 [1/1] (0.00ns)   --->   "%trunc_ln186_1 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_1_ret, i32 16, i32 23)" [SHA_new/SHA_new/sha256_impl.c:186]   --->   Operation 464 'partselect' 'trunc_ln186_1' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 465 [1/1] (0.00ns)   --->   "%trunc_ln187_1 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_2_ret, i32 16, i32 23)" [SHA_new/SHA_new/sha256_impl.c:187]   --->   Operation 465 'partselect' 'trunc_ln187_1' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 466 [1/1] (0.00ns)   --->   "%trunc_ln188_1 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_3_ret, i32 16, i32 23)" [SHA_new/SHA_new/sha256_impl.c:188]   --->   Operation 466 'partselect' 'trunc_ln188_1' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 467 [1/1] (0.00ns)   --->   "%trunc_ln189_1 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_4_ret, i32 16, i32 23)" [SHA_new/SHA_new/sha256_impl.c:189]   --->   Operation 467 'partselect' 'trunc_ln189_1' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 468 [1/1] (0.00ns)   --->   "%trunc_ln190_1 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_5_ret, i32 16, i32 23)" [SHA_new/SHA_new/sha256_impl.c:190]   --->   Operation 468 'partselect' 'trunc_ln190_1' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 469 [1/1] (0.00ns)   --->   "%trunc_ln191_1 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_6_ret, i32 16, i32 23)" [SHA_new/SHA_new/sha256_impl.c:191]   --->   Operation 469 'partselect' 'trunc_ln191_1' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 470 [1/1] (0.00ns)   --->   "%trunc_ln192_1 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_7_ret, i32 16, i32 23)" [SHA_new/SHA_new/sha256_impl.c:192]   --->   Operation 470 'partselect' 'trunc_ln192_1' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 471 [1/1] (0.00ns)   --->   "%trunc_ln185_2 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_0_ret, i32 8, i32 15)" [SHA_new/SHA_new/sha256_impl.c:185]   --->   Operation 471 'partselect' 'trunc_ln185_2' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 472 [1/1] (0.00ns)   --->   "%trunc_ln186_2 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_1_ret, i32 8, i32 15)" [SHA_new/SHA_new/sha256_impl.c:186]   --->   Operation 472 'partselect' 'trunc_ln186_2' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 473 [1/1] (0.00ns)   --->   "%trunc_ln187_2 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_2_ret, i32 8, i32 15)" [SHA_new/SHA_new/sha256_impl.c:187]   --->   Operation 473 'partselect' 'trunc_ln187_2' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 474 [1/1] (0.00ns)   --->   "%trunc_ln188_2 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_3_ret, i32 8, i32 15)" [SHA_new/SHA_new/sha256_impl.c:188]   --->   Operation 474 'partselect' 'trunc_ln188_2' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 475 [1/1] (0.00ns)   --->   "%trunc_ln189_2 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_4_ret, i32 8, i32 15)" [SHA_new/SHA_new/sha256_impl.c:189]   --->   Operation 475 'partselect' 'trunc_ln189_2' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 476 [1/1] (0.00ns)   --->   "%trunc_ln190_2 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_5_ret, i32 8, i32 15)" [SHA_new/SHA_new/sha256_impl.c:190]   --->   Operation 476 'partselect' 'trunc_ln190_2' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 477 [1/1] (0.00ns)   --->   "%trunc_ln191_2 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_6_ret, i32 8, i32 15)" [SHA_new/SHA_new/sha256_impl.c:191]   --->   Operation 477 'partselect' 'trunc_ln191_2' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 478 [1/1] (0.00ns)   --->   "%trunc_ln192_2 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ctx_state_7_ret, i32 8, i32 15)" [SHA_new/SHA_new/sha256_impl.c:192]   --->   Operation 478 'partselect' 'trunc_ln192_2' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 479 [1/1] (0.00ns)   --->   "%trunc_ln185 = trunc i32 %ctx_state_0_ret to i8" [SHA_new/SHA_new/sha256_impl.c:185]   --->   Operation 479 'trunc' 'trunc_ln185' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 480 [1/1] (0.00ns)   --->   "%trunc_ln186 = trunc i32 %ctx_state_1_ret to i8" [SHA_new/SHA_new/sha256_impl.c:186]   --->   Operation 480 'trunc' 'trunc_ln186' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 481 [1/1] (0.00ns)   --->   "%trunc_ln187 = trunc i32 %ctx_state_2_ret to i8" [SHA_new/SHA_new/sha256_impl.c:187]   --->   Operation 481 'trunc' 'trunc_ln187' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 482 [1/1] (0.00ns)   --->   "%trunc_ln188 = trunc i32 %ctx_state_3_ret to i8" [SHA_new/SHA_new/sha256_impl.c:188]   --->   Operation 482 'trunc' 'trunc_ln188' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 483 [1/1] (0.00ns)   --->   "%trunc_ln189 = trunc i32 %ctx_state_4_ret to i8" [SHA_new/SHA_new/sha256_impl.c:189]   --->   Operation 483 'trunc' 'trunc_ln189' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 484 [1/1] (0.00ns)   --->   "%trunc_ln190 = trunc i32 %ctx_state_5_ret to i8" [SHA_new/SHA_new/sha256_impl.c:190]   --->   Operation 484 'trunc' 'trunc_ln190' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 485 [1/1] (0.00ns)   --->   "%trunc_ln191 = trunc i32 %ctx_state_6_ret to i8" [SHA_new/SHA_new/sha256_impl.c:191]   --->   Operation 485 'trunc' 'trunc_ln191' <Predicate = true> <Delay = 0.00>
+ST_99 : Operation 486 [1/1] (0.00ns)   --->   "%trunc_ln192 = trunc i32 %ctx_state_7_ret to i8" [SHA_new/SHA_new/sha256_impl.c:192]   --->   Operation 486 'trunc' 'trunc_ln192' <Predicate = true> <Delay = 0.00>
+
+State 100 <SV = 98> <Delay = 0.85>
+ST_100 : Operation 487 [1/1] (0.00ns)   --->   "%hash_addr_2 = getelementptr [64 x i8]* %hash, i64 0, i64 8" [SHA_new/SHA_new/sha256_impl.c:187]   --->   Operation 487 'getelementptr' 'hash_addr_2' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 488 [1/1] (0.85ns)   --->   "store i8 %trunc_ln6, i8* %hash_addr_2, align 1" [SHA_new/SHA_new/sha256_impl.c:187]   --->   Operation 488 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_100 : Operation 489 [1/1] (0.00ns)   --->   "%hash_addr_3 = getelementptr [64 x i8]* %hash, i64 0, i64 12" [SHA_new/SHA_new/sha256_impl.c:188]   --->   Operation 489 'getelementptr' 'hash_addr_3' <Predicate = true> <Delay = 0.00>
+ST_100 : Operation 490 [1/1] (0.85ns)   --->   "store i8 %trunc_ln7, i8* %hash_addr_3, align 1" [SHA_new/SHA_new/sha256_impl.c:188]   --->   Operation 490 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 101 <SV = 99> <Delay = 0.85>
+ST_101 : Operation 491 [1/1] (0.00ns)   --->   "%hash_addr_4 = getelementptr [64 x i8]* %hash, i64 0, i64 16" [SHA_new/SHA_new/sha256_impl.c:189]   --->   Operation 491 'getelementptr' 'hash_addr_4' <Predicate = true> <Delay = 0.00>
+ST_101 : Operation 492 [1/1] (0.85ns)   --->   "store i8 %trunc_ln8, i8* %hash_addr_4, align 1" [SHA_new/SHA_new/sha256_impl.c:189]   --->   Operation 492 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_101 : Operation 493 [1/1] (0.00ns)   --->   "%hash_addr_5 = getelementptr [64 x i8]* %hash, i64 0, i64 20" [SHA_new/SHA_new/sha256_impl.c:190]   --->   Operation 493 'getelementptr' 'hash_addr_5' <Predicate = true> <Delay = 0.00>
+ST_101 : Operation 494 [1/1] (0.85ns)   --->   "store i8 %trunc_ln9, i8* %hash_addr_5, align 1" [SHA_new/SHA_new/sha256_impl.c:190]   --->   Operation 494 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 102 <SV = 100> <Delay = 0.85>
+ST_102 : Operation 495 [1/1] (0.00ns)   --->   "%hash_addr_6 = getelementptr [64 x i8]* %hash, i64 0, i64 24" [SHA_new/SHA_new/sha256_impl.c:191]   --->   Operation 495 'getelementptr' 'hash_addr_6' <Predicate = true> <Delay = 0.00>
+ST_102 : Operation 496 [1/1] (0.85ns)   --->   "store i8 %trunc_ln, i8* %hash_addr_6, align 1" [SHA_new/SHA_new/sha256_impl.c:191]   --->   Operation 496 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_102 : Operation 497 [1/1] (0.00ns)   --->   "%hash_addr_7 = getelementptr [64 x i8]* %hash, i64 0, i64 28" [SHA_new/SHA_new/sha256_impl.c:192]   --->   Operation 497 'getelementptr' 'hash_addr_7' <Predicate = true> <Delay = 0.00>
+ST_102 : Operation 498 [1/1] (0.85ns)   --->   "store i8 %trunc_ln1, i8* %hash_addr_7, align 1" [SHA_new/SHA_new/sha256_impl.c:192]   --->   Operation 498 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 103 <SV = 101> <Delay = 0.85>
+ST_103 : Operation 499 [1/1] (0.00ns)   --->   "%hash_addr_8 = getelementptr [64 x i8]* %hash, i64 0, i64 1" [SHA_new/SHA_new/sha256_impl.c:185]   --->   Operation 499 'getelementptr' 'hash_addr_8' <Predicate = true> <Delay = 0.00>
+ST_103 : Operation 500 [1/1] (0.85ns)   --->   "store i8 %trunc_ln185_1, i8* %hash_addr_8, align 1" [SHA_new/SHA_new/sha256_impl.c:185]   --->   Operation 500 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_103 : Operation 501 [1/1] (0.00ns)   --->   "%hash_addr_9 = getelementptr [64 x i8]* %hash, i64 0, i64 5" [SHA_new/SHA_new/sha256_impl.c:186]   --->   Operation 501 'getelementptr' 'hash_addr_9' <Predicate = true> <Delay = 0.00>
+ST_103 : Operation 502 [1/1] (0.85ns)   --->   "store i8 %trunc_ln186_1, i8* %hash_addr_9, align 1" [SHA_new/SHA_new/sha256_impl.c:186]   --->   Operation 502 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 104 <SV = 102> <Delay = 0.85>
+ST_104 : Operation 503 [1/1] (0.00ns)   --->   "%hash_addr_10 = getelementptr [64 x i8]* %hash, i64 0, i64 9" [SHA_new/SHA_new/sha256_impl.c:187]   --->   Operation 503 'getelementptr' 'hash_addr_10' <Predicate = true> <Delay = 0.00>
+ST_104 : Operation 504 [1/1] (0.85ns)   --->   "store i8 %trunc_ln187_1, i8* %hash_addr_10, align 1" [SHA_new/SHA_new/sha256_impl.c:187]   --->   Operation 504 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_104 : Operation 505 [1/1] (0.00ns)   --->   "%hash_addr_11 = getelementptr [64 x i8]* %hash, i64 0, i64 13" [SHA_new/SHA_new/sha256_impl.c:188]   --->   Operation 505 'getelementptr' 'hash_addr_11' <Predicate = true> <Delay = 0.00>
+ST_104 : Operation 506 [1/1] (0.85ns)   --->   "store i8 %trunc_ln188_1, i8* %hash_addr_11, align 1" [SHA_new/SHA_new/sha256_impl.c:188]   --->   Operation 506 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 105 <SV = 103> <Delay = 0.85>
+ST_105 : Operation 507 [1/1] (0.00ns)   --->   "%hash_addr_12 = getelementptr [64 x i8]* %hash, i64 0, i64 17" [SHA_new/SHA_new/sha256_impl.c:189]   --->   Operation 507 'getelementptr' 'hash_addr_12' <Predicate = true> <Delay = 0.00>
+ST_105 : Operation 508 [1/1] (0.85ns)   --->   "store i8 %trunc_ln189_1, i8* %hash_addr_12, align 1" [SHA_new/SHA_new/sha256_impl.c:189]   --->   Operation 508 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_105 : Operation 509 [1/1] (0.00ns)   --->   "%hash_addr_13 = getelementptr [64 x i8]* %hash, i64 0, i64 21" [SHA_new/SHA_new/sha256_impl.c:190]   --->   Operation 509 'getelementptr' 'hash_addr_13' <Predicate = true> <Delay = 0.00>
+ST_105 : Operation 510 [1/1] (0.85ns)   --->   "store i8 %trunc_ln190_1, i8* %hash_addr_13, align 1" [SHA_new/SHA_new/sha256_impl.c:190]   --->   Operation 510 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 106 <SV = 104> <Delay = 0.85>
+ST_106 : Operation 511 [1/1] (0.00ns)   --->   "%hash_addr_14 = getelementptr [64 x i8]* %hash, i64 0, i64 25" [SHA_new/SHA_new/sha256_impl.c:191]   --->   Operation 511 'getelementptr' 'hash_addr_14' <Predicate = true> <Delay = 0.00>
+ST_106 : Operation 512 [1/1] (0.85ns)   --->   "store i8 %trunc_ln191_1, i8* %hash_addr_14, align 1" [SHA_new/SHA_new/sha256_impl.c:191]   --->   Operation 512 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_106 : Operation 513 [1/1] (0.00ns)   --->   "%hash_addr_15 = getelementptr [64 x i8]* %hash, i64 0, i64 29" [SHA_new/SHA_new/sha256_impl.c:192]   --->   Operation 513 'getelementptr' 'hash_addr_15' <Predicate = true> <Delay = 0.00>
+ST_106 : Operation 514 [1/1] (0.85ns)   --->   "store i8 %trunc_ln192_1, i8* %hash_addr_15, align 1" [SHA_new/SHA_new/sha256_impl.c:192]   --->   Operation 514 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 107 <SV = 105> <Delay = 0.85>
+ST_107 : Operation 515 [1/1] (0.00ns)   --->   "%hash_addr_16 = getelementptr [64 x i8]* %hash, i64 0, i64 2" [SHA_new/SHA_new/sha256_impl.c:185]   --->   Operation 515 'getelementptr' 'hash_addr_16' <Predicate = true> <Delay = 0.00>
+ST_107 : Operation 516 [1/1] (0.85ns)   --->   "store i8 %trunc_ln185_2, i8* %hash_addr_16, align 1" [SHA_new/SHA_new/sha256_impl.c:185]   --->   Operation 516 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_107 : Operation 517 [1/1] (0.00ns)   --->   "%hash_addr_17 = getelementptr [64 x i8]* %hash, i64 0, i64 6" [SHA_new/SHA_new/sha256_impl.c:186]   --->   Operation 517 'getelementptr' 'hash_addr_17' <Predicate = true> <Delay = 0.00>
+ST_107 : Operation 518 [1/1] (0.85ns)   --->   "store i8 %trunc_ln186_2, i8* %hash_addr_17, align 1" [SHA_new/SHA_new/sha256_impl.c:186]   --->   Operation 518 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 108 <SV = 106> <Delay = 0.85>
+ST_108 : Operation 519 [1/1] (0.00ns)   --->   "%hash_addr_18 = getelementptr [64 x i8]* %hash, i64 0, i64 10" [SHA_new/SHA_new/sha256_impl.c:187]   --->   Operation 519 'getelementptr' 'hash_addr_18' <Predicate = true> <Delay = 0.00>
+ST_108 : Operation 520 [1/1] (0.85ns)   --->   "store i8 %trunc_ln187_2, i8* %hash_addr_18, align 1" [SHA_new/SHA_new/sha256_impl.c:187]   --->   Operation 520 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_108 : Operation 521 [1/1] (0.00ns)   --->   "%hash_addr_19 = getelementptr [64 x i8]* %hash, i64 0, i64 14" [SHA_new/SHA_new/sha256_impl.c:188]   --->   Operation 521 'getelementptr' 'hash_addr_19' <Predicate = true> <Delay = 0.00>
+ST_108 : Operation 522 [1/1] (0.85ns)   --->   "store i8 %trunc_ln188_2, i8* %hash_addr_19, align 1" [SHA_new/SHA_new/sha256_impl.c:188]   --->   Operation 522 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 109 <SV = 107> <Delay = 0.85>
+ST_109 : Operation 523 [1/1] (0.00ns)   --->   "%hash_addr_20 = getelementptr [64 x i8]* %hash, i64 0, i64 18" [SHA_new/SHA_new/sha256_impl.c:189]   --->   Operation 523 'getelementptr' 'hash_addr_20' <Predicate = true> <Delay = 0.00>
+ST_109 : Operation 524 [1/1] (0.85ns)   --->   "store i8 %trunc_ln189_2, i8* %hash_addr_20, align 1" [SHA_new/SHA_new/sha256_impl.c:189]   --->   Operation 524 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_109 : Operation 525 [1/1] (0.00ns)   --->   "%hash_addr_21 = getelementptr [64 x i8]* %hash, i64 0, i64 22" [SHA_new/SHA_new/sha256_impl.c:190]   --->   Operation 525 'getelementptr' 'hash_addr_21' <Predicate = true> <Delay = 0.00>
+ST_109 : Operation 526 [1/1] (0.85ns)   --->   "store i8 %trunc_ln190_2, i8* %hash_addr_21, align 1" [SHA_new/SHA_new/sha256_impl.c:190]   --->   Operation 526 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 110 <SV = 108> <Delay = 0.85>
+ST_110 : Operation 527 [1/1] (0.00ns)   --->   "%hash_addr_22 = getelementptr [64 x i8]* %hash, i64 0, i64 26" [SHA_new/SHA_new/sha256_impl.c:191]   --->   Operation 527 'getelementptr' 'hash_addr_22' <Predicate = true> <Delay = 0.00>
+ST_110 : Operation 528 [1/1] (0.85ns)   --->   "store i8 %trunc_ln191_2, i8* %hash_addr_22, align 1" [SHA_new/SHA_new/sha256_impl.c:191]   --->   Operation 528 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_110 : Operation 529 [1/1] (0.00ns)   --->   "%hash_addr_23 = getelementptr [64 x i8]* %hash, i64 0, i64 30" [SHA_new/SHA_new/sha256_impl.c:192]   --->   Operation 529 'getelementptr' 'hash_addr_23' <Predicate = true> <Delay = 0.00>
+ST_110 : Operation 530 [1/1] (0.85ns)   --->   "store i8 %trunc_ln192_2, i8* %hash_addr_23, align 1" [SHA_new/SHA_new/sha256_impl.c:192]   --->   Operation 530 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 111 <SV = 109> <Delay = 0.85>
+ST_111 : Operation 531 [1/1] (0.00ns)   --->   "%hash_addr_24 = getelementptr [64 x i8]* %hash, i64 0, i64 3" [SHA_new/SHA_new/sha256_impl.c:185]   --->   Operation 531 'getelementptr' 'hash_addr_24' <Predicate = true> <Delay = 0.00>
+ST_111 : Operation 532 [1/1] (0.85ns)   --->   "store i8 %trunc_ln185, i8* %hash_addr_24, align 1" [SHA_new/SHA_new/sha256_impl.c:185]   --->   Operation 532 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_111 : Operation 533 [1/1] (0.00ns)   --->   "%hash_addr_25 = getelementptr [64 x i8]* %hash, i64 0, i64 7" [SHA_new/SHA_new/sha256_impl.c:186]   --->   Operation 533 'getelementptr' 'hash_addr_25' <Predicate = true> <Delay = 0.00>
+ST_111 : Operation 534 [1/1] (0.85ns)   --->   "store i8 %trunc_ln186, i8* %hash_addr_25, align 1" [SHA_new/SHA_new/sha256_impl.c:186]   --->   Operation 534 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 112 <SV = 110> <Delay = 0.85>
+ST_112 : Operation 535 [1/1] (0.00ns)   --->   "%hash_addr_26 = getelementptr [64 x i8]* %hash, i64 0, i64 11" [SHA_new/SHA_new/sha256_impl.c:187]   --->   Operation 535 'getelementptr' 'hash_addr_26' <Predicate = true> <Delay = 0.00>
+ST_112 : Operation 536 [1/1] (0.85ns)   --->   "store i8 %trunc_ln187, i8* %hash_addr_26, align 1" [SHA_new/SHA_new/sha256_impl.c:187]   --->   Operation 536 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_112 : Operation 537 [1/1] (0.00ns)   --->   "%hash_addr_27 = getelementptr [64 x i8]* %hash, i64 0, i64 15" [SHA_new/SHA_new/sha256_impl.c:188]   --->   Operation 537 'getelementptr' 'hash_addr_27' <Predicate = true> <Delay = 0.00>
+ST_112 : Operation 538 [1/1] (0.85ns)   --->   "store i8 %trunc_ln188, i8* %hash_addr_27, align 1" [SHA_new/SHA_new/sha256_impl.c:188]   --->   Operation 538 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 113 <SV = 111> <Delay = 0.85>
+ST_113 : Operation 539 [1/1] (0.00ns)   --->   "%hash_addr_28 = getelementptr [64 x i8]* %hash, i64 0, i64 19" [SHA_new/SHA_new/sha256_impl.c:189]   --->   Operation 539 'getelementptr' 'hash_addr_28' <Predicate = true> <Delay = 0.00>
+ST_113 : Operation 540 [1/1] (0.85ns)   --->   "store i8 %trunc_ln189, i8* %hash_addr_28, align 1" [SHA_new/SHA_new/sha256_impl.c:189]   --->   Operation 540 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_113 : Operation 541 [1/1] (0.00ns)   --->   "%hash_addr_29 = getelementptr [64 x i8]* %hash, i64 0, i64 23" [SHA_new/SHA_new/sha256_impl.c:190]   --->   Operation 541 'getelementptr' 'hash_addr_29' <Predicate = true> <Delay = 0.00>
+ST_113 : Operation 542 [1/1] (0.85ns)   --->   "store i8 %trunc_ln190, i8* %hash_addr_29, align 1" [SHA_new/SHA_new/sha256_impl.c:190]   --->   Operation 542 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+
+State 114 <SV = 112> <Delay = 0.85>
+ST_114 : Operation 543 [1/1] (0.00ns)   --->   "%hash_addr_30 = getelementptr [64 x i8]* %hash, i64 0, i64 27" [SHA_new/SHA_new/sha256_impl.c:191]   --->   Operation 543 'getelementptr' 'hash_addr_30' <Predicate = true> <Delay = 0.00>
+ST_114 : Operation 544 [1/1] (0.85ns)   --->   "store i8 %trunc_ln191, i8* %hash_addr_30, align 1" [SHA_new/SHA_new/sha256_impl.c:191]   --->   Operation 544 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_114 : Operation 545 [1/1] (0.00ns)   --->   "%hash_addr_31 = getelementptr [64 x i8]* %hash, i64 0, i64 31" [SHA_new/SHA_new/sha256_impl.c:192]   --->   Operation 545 'getelementptr' 'hash_addr_31' <Predicate = true> <Delay = 0.00>
+ST_114 : Operation 546 [1/1] (0.85ns)   --->   "store i8 %trunc_ln192, i8* %hash_addr_31, align 1" [SHA_new/SHA_new/sha256_impl.c:192]   --->   Operation 546 'store' <Predicate = true> <Delay = 0.85> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.85> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_114 : Operation 547 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 547 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.22ns
+The critical path consists of the following:
+	wire read on port 'ctx_datalen_read' (SHA_new/SHA_new/sha256_impl.c:139) [23]  (0 ns)
+	'icmp' operation ('icmp_ln146', SHA_new/SHA_new/sha256_impl.c:146) [24]  (1.22 ns)
+
+ <State 2>: 2.85ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('ctx.datalen', SHA_new/SHA_new/sha256_impl.c:139) ('i', SHA_new/SHA_new/sha256_impl.c:156) [52]  (0 ns)
+	'add' operation ('i', SHA_new/SHA_new/sha256_impl.c:156) [53]  (1.65 ns)
+	'icmp' operation ('icmp_ln157', SHA_new/SHA_new/sha256_impl.c:157) [55]  (1.2 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 7.09ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (7.09 ns)
+
+ <State 10>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 11>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 12>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 13>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 14>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 15>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 16>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 17>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 18>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 19>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 20>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 21>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 22>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 23>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 24>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 25>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 26>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 27>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 28>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 29>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 30>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 31>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 32>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 33>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 34>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 35>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 36>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 37>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 38>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 39>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 40>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 41>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 42>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 43>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 44>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 45>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 46>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 47>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 48>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (8.75 ns)
+
+ <State 49>: 1.32ns
+The critical path consists of the following:
+	'call' operation ('call_ret', SHA_new/SHA_new/sha256_impl.c:161) to 'sha256_transform' [84]  (1.32 ns)
+
+ <State 50>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('ctx_data_0_addr_4', SHA_new/SHA_new/sha256_impl.c:164) [93]  (0 ns)
+	'store' operation ('store_ln164', SHA_new/SHA_new/sha256_impl.c:164) of constant 0 on array 'ctx_data_0' [94]  (0.858 ns)
+
+ <State 51>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('ctx_data_0_addr_6', SHA_new/SHA_new/sha256_impl.c:164) [109]  (0 ns)
+	'store' operation ('store_ln164', SHA_new/SHA_new/sha256_impl.c:164) of constant 0 on array 'ctx_data_0' [110]  (0.858 ns)
+
+ <State 52>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('ctx_data_0_addr_8', SHA_new/SHA_new/sha256_impl.c:164) [125]  (0 ns)
+	'store' operation ('store_ln164', SHA_new/SHA_new/sha256_impl.c:164) of constant 0 on array 'ctx_data_0' [126]  (0.858 ns)
+
+ <State 53>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('ctx_data_0_addr_10', SHA_new/SHA_new/sha256_impl.c:164) [141]  (0 ns)
+	'store' operation ('store_ln164', SHA_new/SHA_new/sha256_impl.c:164) of constant 0 on array 'ctx_data_0' [142]  (0.858 ns)
+
+ <State 54>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('ctx_data_0_addr_12', SHA_new/SHA_new/sha256_impl.c:164) [157]  (0 ns)
+	'store' operation ('store_ln164', SHA_new/SHA_new/sha256_impl.c:164) of constant 0 on array 'ctx_data_0' [158]  (0.858 ns)
+
+ <State 55>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('ctx_data_0_addr_14', SHA_new/SHA_new/sha256_impl.c:164) [173]  (0 ns)
+	'store' operation ('store_ln164', SHA_new/SHA_new/sha256_impl.c:164) of constant 0 on array 'ctx_data_0' [174]  (0.858 ns)
+
+ <State 56>: 1.02ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('ctx_state_0_0', SHA_new/SHA_new/sha256_impl.c:139) with incoming values : ('p_read32', SHA_new/SHA_new/sha256_impl.c:139) ('ctx_state_0_ret1', SHA_new/SHA_new/sha256_impl.c:161) [267]  (1.02 ns)
+
+ <State 57>: 2.5ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('ctx.datalen', SHA_new/SHA_new/sha256_impl.c:139) ('i', SHA_new/SHA_new/sha256_impl.c:148) [233]  (0 ns)
+	'add' operation ('i', SHA_new/SHA_new/sha256_impl.c:148) [234]  (1.65 ns)
+	'getelementptr' operation ('ctx_data_0_addr_2', SHA_new/SHA_new/sha256_impl.c:151) [246]  (0 ns)
+	'store' operation ('store_ln151', SHA_new/SHA_new/sha256_impl.c:151) of constant 0 on array 'ctx_data_0' [258]  (0.858 ns)
+
+ <State 58>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('ctx_data_3_addr_18', SHA_new/SHA_new/sha256_impl.c:171) [275]  (0 ns)
+	'store' operation ('store_ln171', SHA_new/SHA_new/sha256_impl.c:171) of constant 0 on array 'ctx_data_3' [276]  (0.858 ns)
+
+ <State 59>: 7.09ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (7.09 ns)
+
+ <State 60>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 61>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 62>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 63>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 64>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 65>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 66>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 67>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 68>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 69>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 70>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 71>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 72>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 73>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 74>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 75>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 76>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 77>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 78>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 79>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 80>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 81>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 82>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 83>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 84>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 85>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 86>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 87>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 88>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 89>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 90>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 91>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 92>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 93>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 94>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 95>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 96>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 97>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 98>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (8.75 ns)
+
+ <State 99>: 2.17ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', SHA_new/SHA_new/sha256_impl.c:179) to 'sha256_transform' [291]  (1.32 ns)
+	'store' operation ('store_ln185', SHA_new/SHA_new/sha256_impl.c:185) of variable 'trunc_ln4', SHA_new/SHA_new/sha256_impl.c:185 on array 'hash' [302]  (0.858 ns)
+
+ <State 100>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('hash_addr_2', SHA_new/SHA_new/sha256_impl.c:187) [307]  (0 ns)
+	'store' operation ('store_ln187', SHA_new/SHA_new/sha256_impl.c:187) of variable 'trunc_ln6', SHA_new/SHA_new/sha256_impl.c:187 on array 'hash' [308]  (0.858 ns)
+
+ <State 101>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('hash_addr_4', SHA_new/SHA_new/sha256_impl.c:189) [313]  (0 ns)
+	'store' operation ('store_ln189', SHA_new/SHA_new/sha256_impl.c:189) of variable 'trunc_ln8', SHA_new/SHA_new/sha256_impl.c:189 on array 'hash' [314]  (0.858 ns)
+
+ <State 102>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('hash_addr_6', SHA_new/SHA_new/sha256_impl.c:191) [319]  (0 ns)
+	'store' operation ('store_ln191', SHA_new/SHA_new/sha256_impl.c:191) of variable 'trunc_ln', SHA_new/SHA_new/sha256_impl.c:191 on array 'hash' [320]  (0.858 ns)
+
+ <State 103>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('hash_addr_8', SHA_new/SHA_new/sha256_impl.c:185) [325]  (0 ns)
+	'store' operation ('store_ln185', SHA_new/SHA_new/sha256_impl.c:185) of variable 'trunc_ln185_1', SHA_new/SHA_new/sha256_impl.c:185 on array 'hash' [326]  (0.858 ns)
+
+ <State 104>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('hash_addr_10', SHA_new/SHA_new/sha256_impl.c:187) [331]  (0 ns)
+	'store' operation ('store_ln187', SHA_new/SHA_new/sha256_impl.c:187) of variable 'trunc_ln187_1', SHA_new/SHA_new/sha256_impl.c:187 on array 'hash' [332]  (0.858 ns)
+
+ <State 105>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('hash_addr_12', SHA_new/SHA_new/sha256_impl.c:189) [337]  (0 ns)
+	'store' operation ('store_ln189', SHA_new/SHA_new/sha256_impl.c:189) of variable 'trunc_ln189_1', SHA_new/SHA_new/sha256_impl.c:189 on array 'hash' [338]  (0.858 ns)
+
+ <State 106>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('hash_addr_14', SHA_new/SHA_new/sha256_impl.c:191) [343]  (0 ns)
+	'store' operation ('store_ln191', SHA_new/SHA_new/sha256_impl.c:191) of variable 'trunc_ln191_1', SHA_new/SHA_new/sha256_impl.c:191 on array 'hash' [344]  (0.858 ns)
+
+ <State 107>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('hash_addr_16', SHA_new/SHA_new/sha256_impl.c:185) [349]  (0 ns)
+	'store' operation ('store_ln185', SHA_new/SHA_new/sha256_impl.c:185) of variable 'trunc_ln185_2', SHA_new/SHA_new/sha256_impl.c:185 on array 'hash' [350]  (0.858 ns)
+
+ <State 108>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('hash_addr_18', SHA_new/SHA_new/sha256_impl.c:187) [355]  (0 ns)
+	'store' operation ('store_ln187', SHA_new/SHA_new/sha256_impl.c:187) of variable 'trunc_ln187_2', SHA_new/SHA_new/sha256_impl.c:187 on array 'hash' [356]  (0.858 ns)
+
+ <State 109>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('hash_addr_20', SHA_new/SHA_new/sha256_impl.c:189) [361]  (0 ns)
+	'store' operation ('store_ln189', SHA_new/SHA_new/sha256_impl.c:189) of variable 'trunc_ln189_2', SHA_new/SHA_new/sha256_impl.c:189 on array 'hash' [362]  (0.858 ns)
+
+ <State 110>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('hash_addr_22', SHA_new/SHA_new/sha256_impl.c:191) [367]  (0 ns)
+	'store' operation ('store_ln191', SHA_new/SHA_new/sha256_impl.c:191) of variable 'trunc_ln191_2', SHA_new/SHA_new/sha256_impl.c:191 on array 'hash' [368]  (0.858 ns)
+
+ <State 111>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('hash_addr_24', SHA_new/SHA_new/sha256_impl.c:185) [373]  (0 ns)
+	'store' operation ('store_ln185', SHA_new/SHA_new/sha256_impl.c:185) of variable 'trunc_ln185', SHA_new/SHA_new/sha256_impl.c:185 on array 'hash' [374]  (0.858 ns)
+
+ <State 112>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('hash_addr_26', SHA_new/SHA_new/sha256_impl.c:187) [379]  (0 ns)
+	'store' operation ('store_ln187', SHA_new/SHA_new/sha256_impl.c:187) of variable 'trunc_ln187', SHA_new/SHA_new/sha256_impl.c:187 on array 'hash' [380]  (0.858 ns)
+
+ <State 113>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('hash_addr_28', SHA_new/SHA_new/sha256_impl.c:189) [385]  (0 ns)
+	'store' operation ('store_ln189', SHA_new/SHA_new/sha256_impl.c:189) of variable 'trunc_ln189', SHA_new/SHA_new/sha256_impl.c:189 on array 'hash' [386]  (0.858 ns)
+
+ <State 114>: 0.858ns
+The critical path consists of the following:
+	'getelementptr' operation ('hash_addr_30', SHA_new/SHA_new/sha256_impl.c:191) [391]  (0 ns)
+	'store' operation ('store_ln191', SHA_new/SHA_new/sha256_impl.c:191) of variable 'trunc_ln191', SHA_new/SHA_new/sha256_impl.c:191 on array 'hash' [392]  (0.858 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

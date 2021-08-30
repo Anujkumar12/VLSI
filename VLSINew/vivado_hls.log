@@ -1,0 +1,303 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Pratik Kulkar' on host 'desktop-tbolbcj' (Windows NT_amd64 version 6.2) on Wed Apr 14 12:12:15 +0530 2021
+INFO: [HLS 200-10] In directory 'D:/VLSINew'
+Sourcing Tcl script 'D:/VLSINew/SHA/solution2_Kintex_with_hardware/csynth.tcl'
+INFO: [HLS 200-10] Opening project 'D:/VLSINew/SHA'.
+INFO: [HLS 200-10] Adding design file 'SHA_new/SHA_new/sha256_impl.c' to the project
+INFO: [HLS 200-10] Adding design file 'SHA_new/SHA_new/sha256.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'SHA_new/SHA_new/sha256_tb.c' to the project
+INFO: [HLS 200-10] Opening solution 'D:/VLSINew/SHA/solution2_Kintex_with_hardware'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xcku025-ffva1156-1-c'
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'SHA_new/SHA_new/sha256.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'SHA_new/SHA_new/sha256_impl.c' ... 
+WARNING: [HLS 200-40] In file included from SHA_new/SHA_new/sha256_impl.c:1:
+SHA_new/SHA_new/sha256_impl.c:30:10: warning: ordered comparison between pointer and integer ('unsigned int *' and 'unsigned int')
+   if (a > 0xffffffff - (c)) ++b; a += c;
+       ~ ^ ~~~~~~~~~~~~~~~~
+SHA_new/SHA_new/sha256_impl.c:133:22: warning: incompatible integer to pointer conversion passing 'unsigned int' to parameter of type 'unsigned int *'; take the address with & [-Wint-conversion]
+         DBL_INT_ADD(ctx->bitlen[0],ctx->bitlen[1],512);
+                     ^~~~~~~~~~~~~~
+                     &
+SHA_new/SHA_new/sha256_impl.c:29:32: note: passing argument to parameter 'a' here
+void DBL_INT_ADD(unsigned int *a, unsigned int *b, unsigned int c) {
+                               ^
+SHA_new/SHA_new/sha256_impl.c:133:37: warning: incompatible integer to pointer conversion passing 'unsigned int' to parameter of type 'unsigned int *'; take the address with & [-Wint-conversion]
+         DBL_INT_ADD(ctx->bitlen[0],ctx->bitlen[1],512);
+                                    ^~~~~~~~~~~~~~
+                                    &
+SHA_new/SHA_new/sha256_impl.c:29:49: note: passing argument to parameter 'b' here
+void DBL_INT_ADD(unsigned int *a, unsigned int *b, unsigned int c) {
+                                                ^
+SHA_new/SHA_new/sha256_impl.c:170:16: warning: incompatible integer to pointer conversion passing 'unsigned int' to parameter of type 'unsigned int *'; take the address with & [-Wint-conversion]
+   DBL_INT_ADD(ctx->bitlen[0],ctx->bitlen[1],ctx->datalen * 8);
+               ^~~~~~~~~~~~~~
+               &
+SHA_new/SHA_new/sha256_impl.c:29:32: note: passing argument to parameter 'a' here
+void DBL_INT_ADD(unsigned int *a, unsigned int *b, unsigned int c) {
+                               ^
+SHA_new/SHA_new/sha256_impl.c:170:31: warning: incompatible integer to pointer conversion passing 'unsigned int' to parameter of type 'unsigned int *'; take the address with & [-Wint-conversion]
+   DBL_INT_ADD(ctx->bitlen[0],ctx->bitlen[1],ctx->datalen * 8);
+                              ^~~~~~~~~~~~~~
+                              &
+SHA_new/SHA_new/sha256_impl.c:29:49: note: passing argument to parameter 'b' here
+void DBL_INT_ADD(unsigned int *a, unsigned int *b, unsigned int c) {
+                                                ^
+5 warnings generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 175.203 ; gain = 85.000
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 175.203 ; gain = 85.000
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'sha256_init' into 'sha256' (SHA_new/SHA_new/sha256.c:30).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 175.203 ; gain = 85.000
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'ROTRIGHT' into 'SIG1' (SHA_new/SHA_new/sha256_impl.c:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'ROTRIGHT' into 'SIG0' (SHA_new/SHA_new/sha256_impl.c:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'ROTRIGHT' into 'EP1' (SHA_new/SHA_new/sha256_impl.c:51) automatically.
+INFO: [XFORM 203-602] Inlining function 'ROTRIGHT' into 'EP0' (SHA_new/SHA_new/sha256_impl.c:47) automatically.
+INFO: [XFORM 203-602] Inlining function 'SIG1' into 'sha256_transform' (SHA_new/SHA_new/sha256_impl.c:72) automatically.
+INFO: [XFORM 203-602] Inlining function 'SIG0' into 'sha256_transform' (SHA_new/SHA_new/sha256_impl.c:72) automatically.
+INFO: [XFORM 203-602] Inlining function 'EP1' into 'sha256_transform' (SHA_new/SHA_new/sha256_impl.c:85) automatically.
+INFO: [XFORM 203-602] Inlining function 'CH' into 'sha256_transform' (SHA_new/SHA_new/sha256_impl.c:85) automatically.
+INFO: [XFORM 203-602] Inlining function 'EP0' into 'sha256_transform' (SHA_new/SHA_new/sha256_impl.c:86) automatically.
+INFO: [XFORM 203-602] Inlining function 'MAJ' into 'sha256_transform' (SHA_new/SHA_new/sha256_impl.c:86) automatically.
+INFO: [XFORM 203-602] Inlining function 'DBL_INT_ADD' into 'sha256_update' (SHA_new/SHA_new/sha256_impl.c:133) automatically.
+INFO: [XFORM 203-602] Inlining function 'DBL_INT_ADD' into 'sha256_final' (SHA_new/SHA_new/sha256_impl.c:170) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 175.203 ; gain = 85.000
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sha256_final' (SHA_new/SHA_new/sha256_impl.c:139).
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-3' (SHA_new/SHA_new/sha256_impl.c:162) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-4' (SHA_new/SHA_new/sha256_impl.c:183) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sha256_transform' (SHA_new/SHA_new/sha256_impl.c:62).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-2' (SHA_new/SHA_new/sha256_impl.c:70) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-3' (SHA_new/SHA_new/sha256_impl.c:83) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 63 for loop 'Loop-0-1' (SHA_new/SHA_new/sha256.c:47:1) in function 'sha256'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 32 for loop 'Loop-1' (SHA_new/SHA_new/sha256.c:58:1) in function 'sha256'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 32 for loop 'Loop-1' (SHA_new/SHA_new/sha256.c:58:1) in function 'sha256'.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1' (SHA_new/SHA_new/sha256_impl.c:149) in function 'sha256_final' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-2' (SHA_new/SHA_new/sha256_impl.c:157) in function 'sha256_final' completely: variable loop bound.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (SHA_new/SHA_new/sha256_impl.c:162) in function 'sha256_final' completely with a factor of 56.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (SHA_new/SHA_new/sha256_impl.c:183) in function 'sha256_final' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (SHA_new/SHA_new/sha256_impl.c:66) in function 'sha256_transform' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (SHA_new/SHA_new/sha256_impl.c:70) in function 'sha256_transform' completely with a factor of 48.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (SHA_new/SHA_new/sha256_impl.c:83) in function 'sha256_transform' completely with a factor of 64.
+INFO: [XFORM 203-102] Partitioning array 'm' (SHA_new/SHA_new/sha256_impl.c:64) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sha256ctx.bitlen' (SHA_new/SHA_new/sha256.c:29) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sha256ctx.state' (SHA_new/SHA_new/sha256.c:29) automatically.
+INFO: [XFORM 203-101] Partitioning array 'sha256ctx.data' (SHA_new/SHA_new/sha256.c:29) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-602] Inlining function 'ROTRIGHT' into 'SIG1' (SHA_new/SHA_new/sha256_impl.c:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'ROTRIGHT' into 'SIG0' (SHA_new/SHA_new/sha256_impl.c:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'ROTRIGHT' into 'EP1' (SHA_new/SHA_new/sha256_impl.c:51) automatically.
+INFO: [XFORM 203-602] Inlining function 'ROTRIGHT' into 'EP0' (SHA_new/SHA_new/sha256_impl.c:47) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_transform' (SHA_new/SHA_new/sha256_impl.c:62)...601 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 175.203 ; gain = 85.000
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 242.242 ; gain = 152.039
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sha256' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SIG1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'SIG1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.545 seconds; current allocated memory: 191.232 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.044 seconds; current allocated memory: 191.297 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SIG0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'SIG0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.054 seconds; current allocated memory: 191.362 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.043 seconds; current allocated memory: 191.421 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'EP1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'EP1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.055 seconds; current allocated memory: 191.458 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.044 seconds; current allocated memory: 191.520 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'CH' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'CH'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.057 seconds; current allocated memory: 191.559 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.044 seconds; current allocated memory: 191.603 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'EP0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'EP0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.059 seconds; current allocated memory: 191.640 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.047 seconds; current allocated memory: 191.703 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MAJ' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'MAJ'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.058 seconds; current allocated memory: 191.725 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.047 seconds; current allocated memory: 191.769 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sha256_transform'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('data_0_load_2', SHA_new/SHA_new/sha256_impl.c:68) on array 'data_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'data_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 8, Depth = 41.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 6.246 seconds; current allocated memory: 194.298 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.011 seconds; current allocated memory: 197.586 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.759 seconds; current allocated memory: 198.151 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.215 seconds; current allocated memory: 198.686 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Function contains subloop(s) not being unrolled.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.542 seconds; current allocated memory: 199.777 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.427 seconds; current allocated memory: 201.361 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.609 seconds; current allocated memory: 201.971 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.136 seconds; current allocated memory: 202.910 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SIG1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SIG1'.
+INFO: [HLS 200-111]  Elapsed time: 1.146 seconds; current allocated memory: 203.456 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SIG0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SIG0'.
+INFO: [HLS 200-111]  Elapsed time: 0.072 seconds; current allocated memory: 203.646 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'EP1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'EP1'.
+INFO: [HLS 200-111]  Elapsed time: 0.076 seconds; current allocated memory: 203.771 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'CH' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'CH'.
+INFO: [HLS 200-111]  Elapsed time: 0.076 seconds; current allocated memory: 203.850 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'EP0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'EP0'.
+INFO: [HLS 200-111]  Elapsed time: 0.072 seconds; current allocated memory: 203.967 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MAJ' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MAJ'.
+INFO: [HLS 200-111]  Elapsed time: 0.078 seconds; current allocated memory: 204.046 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_transform'.
+INFO: [HLS 200-111]  Elapsed time: 0.287 seconds; current allocated memory: 209.456 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_update'.
+INFO: [HLS 200-111]  Elapsed time: 2.413 seconds; current allocated memory: 212.571 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_final'.
+INFO: [HLS 200-111]  Elapsed time: 0.816 seconds; current allocated memory: 214.894 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/data' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/base_offset' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/bytes' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/digest' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sha256' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'data', 'base_offset', 'bytes' and 'digest' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_0' to 'sha256_sha256ctx_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_1' to 'sha256_sha256ctx_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_2' to 'sha256_sha256ctx_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_3' to 'sha256_sha256ctx_eOg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256'.
+INFO: [HLS 200-111]  Elapsed time: 1.066 seconds; current allocated memory: 216.486 MB.
+INFO: [RTMG 210-278] Implementing memory 'sha256_seg_buf_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'sha256_sha256ctx_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 310.223 ; gain = 220.020
+INFO: [VHDL 208-304] Generating VHDL RTL for sha256.
+INFO: [VLOG 209-307] Generating Verilog RTL for sha256.
+INFO: [HLS 200-112] Total elapsed time: 35.03 seconds; peak allocated memory: 216.486 MB.

@@ -1,0 +1,89 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'sha256_transform'" level="0">
+<item name = "Date">Wed Apr 14 12:12:37 2021
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">SHA</item>
+<item name = "Solution">solution2_Kintex_with_hardware</item>
+<item name = "Product family">kintexu</item>
+<item name = "Target device">xcku025-ffva1156-1-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.699, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">40, 40, 8, 8, function</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_CH_fu_862">CH, 0, 0, 1, 1, function</column>
+<column name="grp_CH_fu_872">CH, 0, 0, 1, 1, function</column>
+<column name="grp_CH_fu_879">CH, 0, 0, 1, 1, function</column>
+<column name="grp_CH_fu_886">CH, 0, 0, 1, 1, function</column>
+<column name="grp_CH_fu_893">CH, 0, 0, 1, 1, function</column>
+<column name="grp_CH_fu_900">CH, 0, 0, 1, 1, function</column>
+<column name="grp_CH_fu_907">CH, 0, 0, 1, 1, function</column>
+<column name="grp_CH_fu_914">CH, 0, 0, 1, 1, function</column>
+<column name="grp_MAJ_fu_921">MAJ, 0, 0, 1, 1, function</column>
+<column name="grp_MAJ_fu_931">MAJ, 0, 0, 1, 1, function</column>
+<column name="grp_MAJ_fu_938">MAJ, 0, 0, 1, 1, function</column>
+<column name="grp_MAJ_fu_945">MAJ, 0, 0, 1, 1, function</column>
+<column name="grp_MAJ_fu_952">MAJ, 0, 0, 1, 1, function</column>
+<column name="grp_MAJ_fu_959">MAJ, 0, 0, 1, 1, function</column>
+<column name="grp_MAJ_fu_966">MAJ, 0, 0, 1, 1, function</column>
+<column name="grp_MAJ_fu_973">MAJ, 0, 0, 1, 1, function</column>
+<column name="grp_EP1_fu_980">EP1, 0, 0, 1, 1, function</column>
+<column name="grp_EP1_fu_986">EP1, 0, 0, 1, 1, function</column>
+<column name="grp_EP1_fu_991">EP1, 0, 0, 1, 1, function</column>
+<column name="grp_EP1_fu_996">EP1, 0, 0, 1, 1, function</column>
+<column name="grp_EP1_fu_1001">EP1, 0, 0, 1, 1, function</column>
+<column name="grp_EP1_fu_1006">EP1, 0, 0, 1, 1, function</column>
+<column name="grp_EP1_fu_1011">EP1, 0, 0, 1, 1, function</column>
+<column name="grp_EP1_fu_1016">EP1, 0, 0, 1, 1, function</column>
+<column name="grp_EP0_fu_1021">EP0, 0, 0, 1, 1, function</column>
+<column name="grp_EP0_fu_1027">EP0, 0, 0, 1, 1, function</column>
+<column name="grp_EP0_fu_1032">EP0, 0, 0, 1, 1, function</column>
+<column name="grp_EP0_fu_1037">EP0, 0, 0, 1, 1, function</column>
+<column name="grp_EP0_fu_1042">EP0, 0, 0, 1, 1, function</column>
+<column name="grp_EP0_fu_1047">EP0, 0, 0, 1, 1, function</column>
+<column name="grp_EP0_fu_1052">EP0, 0, 0, 1, 1, function</column>
+<column name="grp_EP0_fu_1057">EP0, 0, 0, 1, 1, function</column>
+<column name="grp_SIG0_fu_1062">SIG0, 0, 0, 1, 1, function</column>
+<column name="grp_SIG0_fu_1067">SIG0, 0, 0, 1, 1, function</column>
+<column name="grp_SIG0_fu_1072">SIG0, 0, 0, 1, 1, function</column>
+<column name="grp_SIG0_fu_1077">SIG0, 0, 0, 1, 1, function</column>
+<column name="grp_SIG0_fu_1082">SIG0, 0, 0, 1, 1, function</column>
+<column name="grp_SIG0_fu_1087">SIG0, 0, 0, 1, 1, function</column>
+<column name="grp_SIG1_fu_1092">SIG1, 0, 0, 1, 1, function</column>
+<column name="grp_SIG1_fu_1097">SIG1, 0, 0, 1, 1, function</column>
+<column name="grp_SIG1_fu_1102">SIG1, 0, 0, 1, 1, function</column>
+<column name="grp_SIG1_fu_1107">SIG1, 0, 0, 1, 1, function</column>
+<column name="grp_SIG1_fu_1112">SIG1, 0, 0, 1, 1, function</column>
+<column name="grp_SIG1_fu_1117">SIG1, 0, 0, 1, 1, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="sha256.c" path="C:\Student\SHA_new\sha256.c"/>
+  </source>
+  <testbench>
+    <originFiles name="sha256_tb.c" path="C:\Student\SHA_new\sha256_tb.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

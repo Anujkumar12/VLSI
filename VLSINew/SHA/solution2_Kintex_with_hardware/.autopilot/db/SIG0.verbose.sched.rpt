@@ -1,0 +1,121 @@
+
+
+================================================================
+== Vivado HLS Report for 'SIG0'
+================================================================
+* Date:           Wed Apr 14 12:12:30 2021
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        SHA
+* Solution:       solution2_Kintex_with_hardware
+* Product family: kintexu
+* Target device:  xcku025-ffva1156-1-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     0.474|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    0|    0|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.47>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%x_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %x) nounwind" [SHA_new/SHA_new/sha256_impl.c:54]   --->   Operation 2 'read' 'x_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns) (grouped into LUT with out node xor_ln55_1)   --->   "%lshr_ln = call i25 @_ssdm_op_PartSelect.i25.i32.i32.i32(i32 %x_read, i32 7, i32 31)" [SHA_new/SHA_new/sha256_impl.c:35->SHA_new/SHA_new/sha256_impl.c:55]   --->   Operation 3 'partselect' 'lshr_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns) (grouped into LUT with out node xor_ln55_1)   --->   "%trunc_ln35 = trunc i32 %x_read to i7" [SHA_new/SHA_new/sha256_impl.c:35->SHA_new/SHA_new/sha256_impl.c:55]   --->   Operation 4 'trunc' 'trunc_ln35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns) (grouped into LUT with out node xor_ln55_1)   --->   "%or_ln = call i32 @_ssdm_op_BitConcatenate.i32.i7.i25(i7 %trunc_ln35, i25 %lshr_ln)" [SHA_new/SHA_new/sha256_impl.c:35->SHA_new/SHA_new/sha256_impl.c:55]   --->   Operation 5 'bitconcatenate' 'or_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns) (grouped into LUT with out node xor_ln55_1)   --->   "%lshr_ln35_2 = call i14 @_ssdm_op_PartSelect.i14.i32.i32.i32(i32 %x_read, i32 18, i32 31)" [SHA_new/SHA_new/sha256_impl.c:35->SHA_new/SHA_new/sha256_impl.c:55]   --->   Operation 6 'partselect' 'lshr_ln35_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns) (grouped into LUT with out node xor_ln55_1)   --->   "%trunc_ln35_2 = trunc i32 %x_read to i18" [SHA_new/SHA_new/sha256_impl.c:35->SHA_new/SHA_new/sha256_impl.c:55]   --->   Operation 7 'trunc' 'trunc_ln35_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns) (grouped into LUT with out node xor_ln55_1)   --->   "%or_ln35_2 = call i32 @_ssdm_op_BitConcatenate.i32.i18.i14(i18 %trunc_ln35_2, i14 %lshr_ln35_2)" [SHA_new/SHA_new/sha256_impl.c:35->SHA_new/SHA_new/sha256_impl.c:55]   --->   Operation 8 'bitconcatenate' 'or_ln35_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns) (grouped into LUT with out node xor_ln55_1)   --->   "%lshr_ln5 = call i29 @_ssdm_op_PartSelect.i29.i32.i32.i32(i32 %x_read, i32 3, i32 31)" [SHA_new/SHA_new/sha256_impl.c:55]   --->   Operation 9 'partselect' 'lshr_ln5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns) (grouped into LUT with out node xor_ln55_1)   --->   "%zext_ln55 = zext i29 %lshr_ln5 to i32" [SHA_new/SHA_new/sha256_impl.c:55]   --->   Operation 10 'zext' 'zext_ln55' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns) (grouped into LUT with out node xor_ln55_1)   --->   "%xor_ln55 = xor i32 %zext_ln55, %or_ln35_2" [SHA_new/SHA_new/sha256_impl.c:55]   --->   Operation 11 'xor' 'xor_ln55' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.47ns) (out node of the LUT)   --->   "%xor_ln55_1 = xor i32 %xor_ln55, %or_ln" [SHA_new/SHA_new/sha256_impl.c:55]   --->   Operation 12 'xor' 'xor_ln55_1' <Predicate = true> <Delay = 0.47> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "ret i32 %xor_ln55_1" [SHA_new/SHA_new/sha256_impl.c:55]   --->   Operation 13 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.474ns
+The critical path consists of the following:
+	wire read on port 'x' (SHA_new/SHA_new/sha256_impl.c:54) [2]  (0 ns)
+	'xor' operation ('xor_ln55_1', SHA_new/SHA_new/sha256_impl.c:55) [12]  (0.474 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

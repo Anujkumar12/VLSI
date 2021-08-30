@@ -1,0 +1,75 @@
+   Build using "C:/Xilinx/Vivado/2019.1/msys64/mingw64/bin/g++"
+   Compiling apatb_sha256.cpp
+   Compiling (apcc) sha256_impl.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Pratik Kulkar' on host 'desktop-tbolbcj' (Windows NT_amd64 version 6.2) on Wed Apr 14 11:37:36 +0530 2021
+INFO: [HLS 200-10] In directory 'D:/VLSINew/SHA/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from D:/VLSINew/SHA_new/SHA_new/sha256_impl.c:1:
+D:/VLSINew/SHA_new/SHA_new/sha256_impl.c:30:10: warning: ordered comparison between pointer and integer ('unsigned int *' and 'unsigned int')
+   if (a > 0xffffffff - (c)) ++b; a += c;
+       ~ ^ ~~~~~~~~~~~~~~~~
+D:/VLSINew/SHA_new/SHA_new/sha256_impl.c:133:22: warning: incompatible integer to pointer conversion passing 'unsigned int' to parameter of type 'unsigned int *'; take the address with & [-Wint-conversion]
+         DBL_INT_ADD(ctx->bitlen[0],ctx->bitlen[1],512);
+                     ^~~~~~~~~~~~~~
+                     &
+D:/VLSINew/SHA_new/SHA_new/sha256_impl.c:29:32: note: passing argument to parameter 'a' here
+void DBL_INT_ADD(unsigned int *a, unsigned int *b, unsigned int c) {
+                               ^
+D:/VLSINew/SHA_new/SHA_new/sha256_impl.c:133:37: warning: incompatible integer to pointer conversion passing 'unsigned int' to parameter of type 'unsigned int *'; take the address with & [-Wint-conversion]
+         DBL_INT_ADD(ctx->bitlen[0],ctx->bitlen[1],512);
+                                    ^~~~~~~~~~~~~~
+                                    &
+D:/VLSINew/SHA_new/SHA_new/sha256_impl.c:29:49: note: passing argument to parameter 'b' here
+void DBL_INT_ADD(unsigned int *a, unsigned int *b, unsigned int c) {
+                                                ^
+D:/VLSINew/SHA_new/SHA_new/sha256_impl.c:170:16: warning: incompatible integer to pointer conversion passing 'unsigned int' to parameter of type 'unsigned int *'; take the address with & [-Wint-conversion]
+   DBL_INT_ADD(ctx->bitlen[0],ctx->bitlen[1],ctx->datalen * 8);
+               ^~~~~~~~~~~~~~
+               &
+D:/VLSINew/SHA_new/SHA_new/sha256_impl.c:29:32: note: passing argument to parameter 'a' here
+void DBL_INT_ADD(unsigned int *a, unsigned int *b, unsigned int c) {
+                               ^
+D:/VLSINew/SHA_new/SHA_new/sha256_impl.c:170:31: warning: incompatible integer to pointer conversion passing 'unsigned int' to parameter of type 'unsigned int *'; take the address with & [-Wint-conversion]
+   DBL_INT_ADD(ctx->bitlen[0],ctx->bitlen[1],ctx->datalen * 8);
+                              ^~~~~~~~~~~~~~
+                              &
+D:/VLSINew/SHA_new/SHA_new/sha256_impl.c:29:49: note: passing argument to parameter 'b' here
+void DBL_INT_ADD(unsigned int *a, unsigned int *b, unsigned int c) {
+                                                ^
+5 warnings generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) sha256.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Pratik Kulkar' on host 'desktop-tbolbcj' (Windows NT_amd64 version 6.2) on Wed Apr 14 11:37:41 +0530 2021
+INFO: [HLS 200-10] In directory 'D:/VLSINew/SHA/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) sha256_tb.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Pratik Kulkar' on host 'desktop-tbolbcj' (Windows NT_amd64 version 6.2) on Wed Apr 14 11:37:43 +0530 2021
+INFO: [HLS 200-10] In directory 'D:/VLSINew/SHA/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from D:/VLSINew/SHA_new/SHA_new/sha256_tb.c:1:
+D:/VLSINew/SHA_new/SHA_new/sha256_tb.c:61:15: warning: passing 'unsigned char [32]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+  if( strncmp(digest, sw_hash, 32) ) {
+              ^~~~~~
+C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\string.h:75:35: note: passing argument to parameter '_Str1' here
+  int __cdecl strncmp(const char *_Str1,const char *_Str2,size_t _MaxCount);
+                                  ^
+In file included from D:/VLSINew/SHA_new/SHA_new/sha256_tb.c:1:
+D:/VLSINew/SHA_new/SHA_new/sha256_tb.c:61:23: warning: passing 'unsigned char [32]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+  if( strncmp(digest, sw_hash, 32) ) {
+                      ^~~~~~~
+C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\string.h:75:53: note: passing argument to parameter '_Str2' here
+  int __cdecl strncmp(const char *_Str1,const char *_Str2,size_t _MaxCount);
+                                                    ^
+2 warnings generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe

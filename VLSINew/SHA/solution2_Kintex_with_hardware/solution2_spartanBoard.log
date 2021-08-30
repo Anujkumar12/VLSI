@@ -1,0 +1,532 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7s100-fgga676-2'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'SHA_new/SHA_new/sha256_impl.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'SHA_new/SHA_new/sha256.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 174.195 ; gain = 84.289
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 174.195 ; gain = 84.289
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 174.195 ; gain = 84.289
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sha256_init' into 'sha256' (SHA_new/SHA_new/sha256.c:29) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 174.195 ; gain = 84.289
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sha256_final' (SHA_new/SHA_new/sha256_impl.c:106).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-4' (SHA_new/SHA_new/sha256_impl.c:148) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sha256_transform' (SHA_new/SHA_new/sha256_impl.c:30).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-2' (SHA_new/SHA_new/sha256_impl.c:38) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-3' (SHA_new/SHA_new/sha256_impl.c:51) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 63 for loop 'Loop-0-1' (SHA_new/SHA_new/sha256.c:46:1) in function 'sha256'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 32 for loop 'Loop-1' (SHA_new/SHA_new/sha256.c:57:1) in function 'sha256'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 32 for loop 'Loop-1' (SHA_new/SHA_new/sha256.c:57:1) in function 'sha256'.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1' (SHA_new/SHA_new/sha256_impl.c:116) in function 'sha256_final' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-2' (SHA_new/SHA_new/sha256_impl.c:123) in function 'sha256_final' completely: variable loop bound.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (SHA_new/SHA_new/sha256_impl.c:128) in function 'sha256_final' completely with a factor of 56.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (SHA_new/SHA_new/sha256_impl.c:148) in function 'sha256_final' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (SHA_new/SHA_new/sha256_impl.c:34) in function 'sha256_transform' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (SHA_new/SHA_new/sha256_impl.c:38) in function 'sha256_transform' completely with a factor of 48.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (SHA_new/SHA_new/sha256_impl.c:51) in function 'sha256_transform' completely with a factor of 64.
+INFO: [XFORM 203-102] Partitioning array 'm' (SHA_new/SHA_new/sha256_impl.c:32) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sha256ctx.bitlen' (SHA_new/SHA_new/sha256.c:28) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sha256ctx.state' (SHA_new/SHA_new/sha256.c:28) automatically.
+INFO: [XFORM 203-101] Partitioning array 'sha256ctx.data' (SHA_new/SHA_new/sha256.c:28) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_transform' (SHA_new/SHA_new/sha256_impl.c:30)...601 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 174.195 ; gain = 84.289
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 201.387 ; gain = 111.480
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sha256' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sha256_transform'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 32, Final II = 32, Depth = 97.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 29.484 seconds; current allocated memory: 156.604 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.141 seconds; current allocated memory: 168.020 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.014 seconds; current allocated memory: 169.658 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.377 seconds; current allocated memory: 170.866 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Function contains subloop(s) not being unrolled.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.865 seconds; current allocated memory: 173.016 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.64 seconds; current allocated memory: 175.772 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.925 seconds; current allocated memory: 177.218 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.708 seconds; current allocated memory: 179.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_transform'.
+INFO: [HLS 200-111]  Elapsed time: 2.403 seconds; current allocated memory: 202.779 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_update'.
+INFO: [HLS 200-111]  Elapsed time: 5.866 seconds; current allocated memory: 210.652 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_final'.
+INFO: [HLS 200-111]  Elapsed time: 1.368 seconds; current allocated memory: 214.857 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/data' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/base_offset' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/bytes' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/digest' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sha256' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'data', 'base_offset', 'bytes' and 'digest' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_0' to 'sha256_sha256ctx_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_1' to 'sha256_sha256ctx_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_2' to 'sha256_sha256ctx_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_3' to 'sha256_sha256ctx_eOg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256'.
+INFO: [HLS 200-111]  Elapsed time: 1.563 seconds; current allocated memory: 217.283 MB.
+INFO: [RTMG 210-278] Implementing memory 'sha256_seg_buf_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'sha256_sha256ctx_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 351.406 ; gain = 261.500
+INFO: [VHDL 208-304] Generating VHDL RTL for sha256.
+INFO: [VLOG 209-307] Generating Verilog RTL for sha256.
+INFO: [HLS 200-112] Total elapsed time: 52.918 seconds; peak allocated memory: 217.283 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7s100-fgga484-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'SHA_new/SHA_new/sha256_impl.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'SHA_new/SHA_new/sha256.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 174.766 ; gain = 83.875
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 174.766 ; gain = 83.875
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 174.766 ; gain = 83.875
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sha256_init' into 'sha256' (SHA_new/SHA_new/sha256.c:29) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 174.766 ; gain = 83.875
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sha256_final' (SHA_new/SHA_new/sha256_impl.c:106).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-4' (SHA_new/SHA_new/sha256_impl.c:148) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sha256_transform' (SHA_new/SHA_new/sha256_impl.c:30).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-2' (SHA_new/SHA_new/sha256_impl.c:38) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-3' (SHA_new/SHA_new/sha256_impl.c:51) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 63 for loop 'Loop-0-1' (SHA_new/SHA_new/sha256.c:46:1) in function 'sha256'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 32 for loop 'Loop-1' (SHA_new/SHA_new/sha256.c:57:1) in function 'sha256'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 32 for loop 'Loop-1' (SHA_new/SHA_new/sha256.c:57:1) in function 'sha256'.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1' (SHA_new/SHA_new/sha256_impl.c:116) in function 'sha256_final' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-2' (SHA_new/SHA_new/sha256_impl.c:123) in function 'sha256_final' completely: variable loop bound.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (SHA_new/SHA_new/sha256_impl.c:128) in function 'sha256_final' completely with a factor of 56.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (SHA_new/SHA_new/sha256_impl.c:148) in function 'sha256_final' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (SHA_new/SHA_new/sha256_impl.c:34) in function 'sha256_transform' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (SHA_new/SHA_new/sha256_impl.c:38) in function 'sha256_transform' completely with a factor of 48.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (SHA_new/SHA_new/sha256_impl.c:51) in function 'sha256_transform' completely with a factor of 64.
+INFO: [XFORM 203-102] Partitioning array 'm' (SHA_new/SHA_new/sha256_impl.c:32) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sha256ctx.bitlen' (SHA_new/SHA_new/sha256.c:28) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sha256ctx.state' (SHA_new/SHA_new/sha256.c:28) automatically.
+INFO: [XFORM 203-101] Partitioning array 'sha256ctx.data' (SHA_new/SHA_new/sha256.c:28) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_transform' (SHA_new/SHA_new/sha256_impl.c:30)...601 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 174.766 ; gain = 83.875
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 202.406 ; gain = 111.516
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sha256' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sha256_transform'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 32, Final II = 32, Depth = 129.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 29.595 seconds; current allocated memory: 156.804 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.23 seconds; current allocated memory: 168.288 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.047 seconds; current allocated memory: 169.965 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.404 seconds; current allocated memory: 171.361 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Function contains subloop(s) not being unrolled.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.89 seconds; current allocated memory: 173.620 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.709 seconds; current allocated memory: 176.811 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.951 seconds; current allocated memory: 178.257 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.738 seconds; current allocated memory: 180.774 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_transform'.
+INFO: [HLS 200-111]  Elapsed time: 2.408 seconds; current allocated memory: 204.074 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_update'.
+INFO: [HLS 200-111]  Elapsed time: 5.941 seconds; current allocated memory: 212.202 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_final'.
+INFO: [HLS 200-111]  Elapsed time: 1.408 seconds; current allocated memory: 216.862 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/data' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/base_offset' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/bytes' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/digest' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sha256' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'data', 'base_offset', 'bytes' and 'digest' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_0' to 'sha256_sha256ctx_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_1' to 'sha256_sha256ctx_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_2' to 'sha256_sha256ctx_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_3' to 'sha256_sha256ctx_eOg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256'.
+INFO: [HLS 200-111]  Elapsed time: 1.624 seconds; current allocated memory: 219.261 MB.
+INFO: [RTMG 210-278] Implementing memory 'sha256_seg_buf_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'sha256_sha256ctx_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 356.066 ; gain = 265.176
+INFO: [VHDL 208-304] Generating VHDL RTL for sha256.
+INFO: [VLOG 209-307] Generating Verilog RTL for sha256.
+INFO: [HLS 200-112] Total elapsed time: 53.5 seconds; peak allocated memory: 219.261 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xcku025-ffva1156-1-c'
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'SHA_new/SHA_new/sha256_impl.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'SHA_new/SHA_new/sha256.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 174.754 ; gain = 83.922
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 174.754 ; gain = 83.922
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 174.754 ; gain = 83.922
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sha256_init' into 'sha256' (SHA_new/SHA_new/sha256.c:29) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 174.754 ; gain = 83.922
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sha256_final' (SHA_new/SHA_new/sha256_impl.c:106).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-4' (SHA_new/SHA_new/sha256_impl.c:148) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sha256_transform' (SHA_new/SHA_new/sha256_impl.c:30).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-2' (SHA_new/SHA_new/sha256_impl.c:38) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-3' (SHA_new/SHA_new/sha256_impl.c:51) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 63 for loop 'Loop-0-1' (SHA_new/SHA_new/sha256.c:46:1) in function 'sha256'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 32 for loop 'Loop-1' (SHA_new/SHA_new/sha256.c:57:1) in function 'sha256'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 32 for loop 'Loop-1' (SHA_new/SHA_new/sha256.c:57:1) in function 'sha256'.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1' (SHA_new/SHA_new/sha256_impl.c:116) in function 'sha256_final' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-2' (SHA_new/SHA_new/sha256_impl.c:123) in function 'sha256_final' completely: variable loop bound.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (SHA_new/SHA_new/sha256_impl.c:128) in function 'sha256_final' completely with a factor of 56.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (SHA_new/SHA_new/sha256_impl.c:148) in function 'sha256_final' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (SHA_new/SHA_new/sha256_impl.c:34) in function 'sha256_transform' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (SHA_new/SHA_new/sha256_impl.c:38) in function 'sha256_transform' completely with a factor of 48.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (SHA_new/SHA_new/sha256_impl.c:51) in function 'sha256_transform' completely with a factor of 64.
+INFO: [XFORM 203-102] Partitioning array 'm' (SHA_new/SHA_new/sha256_impl.c:32) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sha256ctx.bitlen' (SHA_new/SHA_new/sha256.c:28) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sha256ctx.state' (SHA_new/SHA_new/sha256.c:28) automatically.
+INFO: [XFORM 203-101] Partitioning array 'sha256ctx.data' (SHA_new/SHA_new/sha256.c:28) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_transform' (SHA_new/SHA_new/sha256_impl.c:30)...601 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 174.754 ; gain = 83.922
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 202.180 ; gain = 111.348
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sha256' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sha256_transform'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 32, Final II = 32, Depth = 40.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 29.685 seconds; current allocated memory: 156.511 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.05 seconds; current allocated memory: 167.442 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.005 seconds; current allocated memory: 168.984 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.334 seconds; current allocated memory: 169.910 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Function contains subloop(s) not being unrolled.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.838 seconds; current allocated memory: 171.824 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.529 seconds; current allocated memory: 173.843 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.889 seconds; current allocated memory: 175.252 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.792 seconds; current allocated memory: 177.785 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_transform'.
+INFO: [HLS 200-111]  Elapsed time: 2.453 seconds; current allocated memory: 200.387 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_update'.
+INFO: [HLS 200-111]  Elapsed time: 5.931 seconds; current allocated memory: 207.698 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_final'.
+INFO: [HLS 200-111]  Elapsed time: 1.296 seconds; current allocated memory: 211.098 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/data' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/base_offset' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/bytes' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/digest' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sha256' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'data', 'base_offset', 'bytes' and 'digest' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_0' to 'sha256_sha256ctx_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_1' to 'sha256_sha256ctx_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_2' to 'sha256_sha256ctx_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_3' to 'sha256_sha256ctx_eOg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256'.
+INFO: [HLS 200-111]  Elapsed time: 1.521 seconds; current allocated memory: 213.643 MB.
+INFO: [RTMG 210-278] Implementing memory 'sha256_seg_buf_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'sha256_sha256ctx_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:42 ; elapsed = 00:00:53 . Memory (MB): peak = 346.172 ; gain = 255.340
+INFO: [VHDL 208-304] Generating VHDL RTL for sha256.
+INFO: [VLOG 209-307] Generating Verilog RTL for sha256.
+INFO: [HLS 200-112] Total elapsed time: 52.86 seconds; peak allocated memory: 213.643 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xcku025-ffva1156-1-c'
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'SHA_new/SHA_new/sha256_impl.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'SHA_new/SHA_new/sha256.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 175.094 ; gain = 85.066
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 175.094 ; gain = 85.066
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 175.094 ; gain = 85.066
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sha256_init' into 'sha256' (SHA_new/SHA_new/sha256.c:29) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 175.094 ; gain = 85.066
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sha256_final' (SHA_new/SHA_new/sha256_impl.c:106).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-4' (SHA_new/SHA_new/sha256_impl.c:148) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sha256_transform' (SHA_new/SHA_new/sha256_impl.c:30).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-2' (SHA_new/SHA_new/sha256_impl.c:38) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-3' (SHA_new/SHA_new/sha256_impl.c:51) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 63 for loop 'Loop-0-1' (SHA_new/SHA_new/sha256.c:46:1) in function 'sha256'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 32 for loop 'Loop-1' (SHA_new/SHA_new/sha256.c:57:1) in function 'sha256'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 32 for loop 'Loop-1' (SHA_new/SHA_new/sha256.c:57:1) in function 'sha256'.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1' (SHA_new/SHA_new/sha256_impl.c:116) in function 'sha256_final' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-2' (SHA_new/SHA_new/sha256_impl.c:123) in function 'sha256_final' completely: variable loop bound.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (SHA_new/SHA_new/sha256_impl.c:128) in function 'sha256_final' completely with a factor of 56.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (SHA_new/SHA_new/sha256_impl.c:148) in function 'sha256_final' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (SHA_new/SHA_new/sha256_impl.c:34) in function 'sha256_transform' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (SHA_new/SHA_new/sha256_impl.c:38) in function 'sha256_transform' completely with a factor of 48.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (SHA_new/SHA_new/sha256_impl.c:51) in function 'sha256_transform' completely with a factor of 64.
+INFO: [XFORM 203-102] Partitioning array 'm' (SHA_new/SHA_new/sha256_impl.c:32) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sha256ctx.bitlen' (SHA_new/SHA_new/sha256.c:28) automatically.
+INFO: [XFORM 203-102] Partitioning array 'sha256ctx.state' (SHA_new/SHA_new/sha256.c:28) automatically.
+INFO: [XFORM 203-101] Partitioning array 'sha256ctx.data' (SHA_new/SHA_new/sha256.c:28) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-11] Balancing expressions in function 'sha256_transform' (SHA_new/SHA_new/sha256_impl.c:30)...601 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 175.094 ; gain = 85.066
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 202.367 ; gain = 112.340
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sha256' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sha256_transform'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('data_0_load_2', SHA_new/SHA_new/sha256_impl.c:36) on array 'data_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'data_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 8, Depth = 40.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 33.568 seconds; current allocated memory: 156.497 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.032 seconds; current allocated memory: 167.418 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.986 seconds; current allocated memory: 168.922 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.333 seconds; current allocated memory: 169.830 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Function contains subloop(s) not being unrolled.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.834 seconds; current allocated memory: 171.721 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.516 seconds; current allocated memory: 173.679 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.884 seconds; current allocated memory: 175.072 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.7 seconds; current allocated memory: 177.589 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_transform'.
+INFO: [HLS 200-111]  Elapsed time: 2.346 seconds; current allocated memory: 199.989 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_update'.
+INFO: [HLS 200-111]  Elapsed time: 5.756 seconds; current allocated memory: 207.246 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256_final' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256_final'.
+INFO: [HLS 200-111]  Elapsed time: 1.295 seconds; current allocated memory: 210.417 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/data' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/base_offset' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/bytes' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sha256/digest' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sha256' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'data', 'base_offset', 'bytes' and 'digest' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_0' to 'sha256_sha256ctx_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_1' to 'sha256_sha256ctx_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_2' to 'sha256_sha256ctx_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sha256_sha256ctx_data_3' to 'sha256_sha256ctx_eOg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha256'.
+INFO: [HLS 200-111]  Elapsed time: 1.523 seconds; current allocated memory: 212.982 MB.
+INFO: [RTMG 210-278] Implementing memory 'sha256_seg_buf_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'sha256_sha256ctx_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 344.797 ; gain = 254.770
+INFO: [VHDL 208-304] Generating VHDL RTL for sha256.
+INFO: [VLOG 209-307] Generating Verilog RTL for sha256.
+INFO: [HLS 200-112] Total elapsed time: 56.278 seconds; peak allocated memory: 212.982 MB.

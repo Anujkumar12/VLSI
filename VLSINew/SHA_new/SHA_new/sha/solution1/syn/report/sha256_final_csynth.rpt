@@ -1,0 +1,268 @@
+
+
+================================================================
+== Vivado HLS Report for 'sha256_final'
+================================================================
+* Date:           Fri Mar 26 11:24:10 2021
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        sha
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.34|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------+------------------+-----+-----+-----+-----+---------+
+        |                             |                  |  Latency  |  Interval | Pipeline|
+        |           Instance          |      Module      | min | max | min | max |   Type  |
+        +-----------------------------+------------------+-----+-----+-----+-----+---------+
+        |grp_sha256_transform_fu_491  |sha256_transform  |  435|  435|  435|  435|   none  |
+        +-----------------------------+------------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    ?|    ?|         1|          -|          -|     ?|    no    |
+        |- Loop 2  |    ?|    ?|         1|          -|          -|     ?|    no    |
+        |- Loop 3  |   56|   56|         1|          -|          -|    56|    no    |
+        |- Loop 4  |   20|   20|         5|          -|          -|     4|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|    1432|   1193|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        3|      -|    2013|   1408|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|    594|
+|Register         |        -|      -|     729|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        3|      0|    4174|   3195|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        1|      0|       3|      6|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+------------------+---------+-------+------+------+
+    |           Instance          |      Module      | BRAM_18K| DSP48E|  FF  |  LUT |
+    +-----------------------------+------------------+---------+-------+------+------+
+    |grp_sha256_transform_fu_491  |sha256_transform  |        3|      0|  2013|  1408|
+    +-----------------------------+------------------+---------+-------+------+------+
+    |Total                        |                  |        3|      0|  2013|  1408|
+    +-----------------------------+------------------+---------+-------+------+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------+----------+-------+-----+-----+------------+------------+
+    |        Variable Name       | Operation| DSP48E|  FF | LUT | Bitwidth P0| Bitwidth P1|
+    +----------------------------+----------+-------+-----+-----+------------+------------+
+    |ctx_bitlen_cast3_fu_704_p2  |     +    |      0|   77|   29|          24|          24|
+    |ctx_bitlen_cast_fu_710_p2   |     +    |      0|   53|   21|          16|          16|
+    |ctx_bitlen_fu_699_p2        |     +    |      0|  101|   37|          32|          32|
+    |i_1_fu_593_p2               |     +    |      0|  101|   37|          32|           1|
+    |i_5_fu_627_p2               |     +    |      0|   23|   11|           6|           1|
+    |i_6_fu_815_p2               |     +    |      0|   14|    9|           3|           1|
+    |i_fu_788_p2                 |     +    |      0|  101|   37|          32|           1|
+    |sum_fu_968_p2               |     +    |      0|   20|   10|           5|           5|
+    |tmp_59_fu_659_p2            |     +    |      0|  101|   37|           1|          32|
+    |tmp_60_fu_716_p2            |     +    |      0|   29|   13|           8|           8|
+    |tmp_70_fu_833_p2            |     -    |      0|   20|   10|           5|           5|
+    |exitcond_fu_795_p2          |   icmp   |      0|    0|   16|          32|           6|
+    |icmp_fu_610_p2              |   icmp   |      0|    0|   13|          26|           1|
+    |tmp_58_fu_654_p2            |   icmp   |      0|    0|   16|          32|          32|
+    |tmp_68_fu_809_p2            |   icmp   |      0|    0|    2|           3|           4|
+    |tmp_fu_587_p2               |   icmp   |      0|    0|   16|          32|           6|
+    |tmp_s_fu_621_p2             |   icmp   |      0|    0|    3|           6|           5|
+    |tmp_71_fu_843_p2            |   lshr   |      0|   99|  101|          32|          32|
+    |tmp_72_fu_853_p2            |   lshr   |      0|   99|  101|          32|          32|
+    |tmp_73_fu_863_p2            |   lshr   |      0|   99|  101|          32|          32|
+    |tmp_75_fu_873_p2            |   lshr   |      0|   99|  101|          32|          32|
+    |tmp_77_fu_883_p2            |   lshr   |      0|   99|  101|          32|          32|
+    |tmp_79_fu_893_p2            |   lshr   |      0|   99|  101|          32|          32|
+    |tmp_81_fu_903_p2            |   lshr   |      0|   99|  101|          32|          32|
+    |tmp_83_fu_913_p2            |   lshr   |      0|   99|  101|          32|          32|
+    |tmp_86_read3_fu_664_p3      |  select  |      0|    0|   32|           1|          32|
+    |sum2_fu_923_p2              |    xor   |      0|    0|    4|           3|           4|
+    |tmp_57_fu_648_p2            |    xor   |      0|    0|   32|          32|           2|
+    +----------------------------+----------+-------+-----+-----+------------+------------+
+    |Total                       |          |      0| 1432| 1193|         587|         474|
+    +----------------------------+----------+-------+-----+-----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |                     Name                     | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                     |  65|         16|    1|         16|
+    |ctx_data_address0                             |  50|          9|    6|         54|
+    |ctx_data_address1                             |  40|          7|    6|         42|
+    |ctx_data_ce0                                  |  15|          3|    1|          3|
+    |ctx_data_ce1                                  |  15|          3|    1|          3|
+    |ctx_data_d0                                   |  40|          7|    8|         56|
+    |ctx_data_d1                                   |  33|          6|    8|         48|
+    |ctx_state_1_reg_409                           |   9|          2|   32|         64|
+    |ctx_state_2_reg_419                           |   9|          2|   32|         64|
+    |ctx_state_3_reg_429                           |   9|          2|   32|         64|
+    |ctx_state_4_reg_439                           |   9|          2|   32|         64|
+    |ctx_state_5_reg_449                           |   9|          2|   32|         64|
+    |ctx_state_6_reg_459                           |   9|          2|   32|         64|
+    |ctx_state_7_reg_469                           |   9|          2|   32|         64|
+    |ctx_state_reg_399                             |   9|          2|   32|         64|
+    |grp_sha256_transform_fu_491_ctx_state_0_read  |  15|          3|   32|         96|
+    |grp_sha256_transform_fu_491_ctx_state_1_read  |  15|          3|   32|         96|
+    |grp_sha256_transform_fu_491_ctx_state_2_read  |  15|          3|   32|         96|
+    |grp_sha256_transform_fu_491_ctx_state_3_read  |  15|          3|   32|         96|
+    |grp_sha256_transform_fu_491_ctx_state_4_read  |  15|          3|   32|         96|
+    |grp_sha256_transform_fu_491_ctx_state_5_read  |  15|          3|   32|         96|
+    |grp_sha256_transform_fu_491_ctx_state_6_read  |  15|          3|   32|         96|
+    |grp_sha256_transform_fu_491_ctx_state_7_read  |  15|          3|   32|         96|
+    |hash_address0                                 |  27|          5|    6|         30|
+    |hash_address1                                 |  27|          5|    6|         30|
+    |hash_d0                                       |  27|          5|    8|         40|
+    |hash_d1                                       |  27|          5|    8|         40|
+    |i_0_in_reg_390                                |   9|          2|   32|         64|
+    |i_1_in_reg_370                                |   9|          2|   32|         64|
+    |i_2_reg_379                                   |   9|          2|    6|         12|
+    |i_3_reg_479                                   |   9|          2|    3|          6|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |Total                                         | 594|        119|  644|       1788|
+    +----------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------+----+----+-----+-----------+
+    |                     Name                    | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                    |  15|   0|   15|          0|
+    |ap_reg_grp_sha256_transform_fu_491_ap_start  |   1|   0|    1|          0|
+    |ctx_state_1_reg_409                          |  32|   0|   32|          0|
+    |ctx_state_2_reg_419                          |  32|   0|   32|          0|
+    |ctx_state_3_reg_429                          |  32|   0|   32|          0|
+    |ctx_state_4_reg_439                          |  32|   0|   32|          0|
+    |ctx_state_5_reg_449                          |  32|   0|   32|          0|
+    |ctx_state_6_reg_459                          |  32|   0|   32|          0|
+    |ctx_state_7_reg_469                          |  32|   0|   32|          0|
+    |ctx_state_reg_399                            |  32|   0|   32|          0|
+    |i_0_in_reg_390                               |  32|   0|   32|          0|
+    |i_1_in_reg_370                               |  32|   0|   32|          0|
+    |i_2_reg_379                                  |   6|   0|    6|          0|
+    |i_3_cast1_reg_1128                           |   3|   0|    5|          2|
+    |i_3_cast2_reg_1123                           |   3|   0|   32|         29|
+    |i_3_reg_479                                  |   3|   0|    3|          0|
+    |i_6_reg_1136                                 |   3|   0|    3|          0|
+    |reg_547                                      |  32|   0|   32|          0|
+    |reg_552                                      |  32|   0|   32|          0|
+    |reg_557                                      |  32|   0|   32|          0|
+    |reg_562                                      |  32|   0|   32|          0|
+    |reg_567                                      |  32|   0|   32|          0|
+    |reg_572                                      |  32|   0|   32|          0|
+    |reg_577                                      |  32|   0|   32|          0|
+    |reg_582                                      |  32|   0|   32|          0|
+    |sum1_reg_1187                                |   3|   0|    4|          1|
+    |sum2_reg_1181                                |   3|   0|    3|          0|
+    |tmp_62_reg_1085                              |   8|   0|    8|          0|
+    |tmp_63_reg_1090                              |   8|   0|    8|          0|
+    |tmp_64_reg_1100                              |   8|   0|    8|          0|
+    |tmp_65_reg_1105                              |   8|   0|    8|          0|
+    |tmp_67_reg_1110                              |   8|   0|    8|          0|
+    |tmp_84_reg_1095                              |   8|   0|    8|          0|
+    |tmp_88_reg_1141                              |   8|   0|    8|          0|
+    |tmp_89_reg_1146                              |   8|   0|    8|          0|
+    |tmp_90_reg_1151                              |   8|   0|    8|          0|
+    |tmp_91_reg_1156                              |   8|   0|    8|          0|
+    |tmp_92_reg_1161                              |   8|   0|    8|          0|
+    |tmp_93_reg_1166                              |   8|   0|    8|          0|
+    |tmp_94_reg_1171                              |   8|   0|    8|          0|
+    |tmp_95_reg_1176                              |   8|   0|    8|          0|
+    |tmp_reg_1065                                 |   1|   0|    1|          0|
+    +---------------------------------------------+----+----+-----+-----------+
+    |Total                                        | 729|   0|  761|         32|
+    +---------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+-------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++-------------------+-----+-----+------------+-------------------+--------------+
+|ap_clk             |  in |    1| ap_ctrl_hs |    sha256_final   | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs |    sha256_final   | return value |
+|ap_start           |  in |    1| ap_ctrl_hs |    sha256_final   | return value |
+|ap_done            | out |    1| ap_ctrl_hs |    sha256_final   | return value |
+|ap_idle            | out |    1| ap_ctrl_hs |    sha256_final   | return value |
+|ap_ready           | out |    1| ap_ctrl_hs |    sha256_final   | return value |
+|ctx_data_address0  | out |    6|  ap_memory |      ctx_data     |     array    |
+|ctx_data_ce0       | out |    1|  ap_memory |      ctx_data     |     array    |
+|ctx_data_we0       | out |    1|  ap_memory |      ctx_data     |     array    |
+|ctx_data_d0        | out |    8|  ap_memory |      ctx_data     |     array    |
+|ctx_data_q0        |  in |    8|  ap_memory |      ctx_data     |     array    |
+|ctx_data_address1  | out |    6|  ap_memory |      ctx_data     |     array    |
+|ctx_data_ce1       | out |    1|  ap_memory |      ctx_data     |     array    |
+|ctx_data_we1       | out |    1|  ap_memory |      ctx_data     |     array    |
+|ctx_data_d1        | out |    8|  ap_memory |      ctx_data     |     array    |
+|ctx_data_q1        |  in |    8|  ap_memory |      ctx_data     |     array    |
+|ctx_datalen_read   |  in |   32|   ap_none  |  ctx_datalen_read |    scalar    |
+|ctx_bitlen_0_read  |  in |   32|   ap_none  | ctx_bitlen_0_read |    scalar    |
+|p_read3            |  in |   32|   ap_none  |      p_read3      |    scalar    |
+|p_read1            |  in |   32|   ap_none  |      p_read1      |    scalar    |
+|p_read2            |  in |   32|   ap_none  |      p_read2      |    scalar    |
+|p_read4            |  in |   32|   ap_none  |      p_read4      |    scalar    |
+|p_read5            |  in |   32|   ap_none  |      p_read5      |    scalar    |
+|p_read6            |  in |   32|   ap_none  |      p_read6      |    scalar    |
+|p_read7            |  in |   32|   ap_none  |      p_read7      |    scalar    |
+|p_read8            |  in |   32|   ap_none  |      p_read8      |    scalar    |
+|p_read9            |  in |   32|   ap_none  |      p_read9      |    scalar    |
+|hash_address0      | out |    6|  ap_memory |        hash       |     array    |
+|hash_ce0           | out |    1|  ap_memory |        hash       |     array    |
+|hash_we0           | out |    1|  ap_memory |        hash       |     array    |
+|hash_d0            | out |    8|  ap_memory |        hash       |     array    |
+|hash_address1      | out |    6|  ap_memory |        hash       |     array    |
+|hash_ce1           | out |    1|  ap_memory |        hash       |     array    |
+|hash_we1           | out |    1|  ap_memory |        hash       |     array    |
+|hash_d1            | out |    8|  ap_memory |        hash       |     array    |
++-------------------+-----+-----+------------+-------------------+--------------+
+

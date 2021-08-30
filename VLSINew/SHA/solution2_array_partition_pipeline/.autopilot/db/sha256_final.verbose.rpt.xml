@@ -1,0 +1,287 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'sha256_final'" level="0">
+<item name = "Date">Wed Apr  7 18:07:29 2021
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">SHA</item>
+<item name = "Solution">solution2_array_partition_pipeline</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.750, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">139, 281, 139, 281, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_sha256_transform_fu_1393">sha256_transform, 97, 97, 32, 32, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">0, 56, 1, -, -, 0 ~ 56, no</column>
+<column name="- Loop 2">0, 8, 1, -, -, 0 ~ 8, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 361, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">0, -, 19492, 41111, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 2487, -</column>
+<column name="Register">-, -, 1142, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, 19, 82, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="grp_sha256_transform_fu_1393">sha256_transform, 0, 0, 19492, 41111, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln135_1_fu_1595_p2">+, 0, 0, 39, 32, 32</column>
+<column name="add_ln135_fu_1682_p2">+, 0, 0, 39, 1, 32</column>
+<column name="add_ln136_1_fu_1600_p2">+, 0, 0, 31, 24, 24</column>
+<column name="add_ln136_2_fu_1606_p2">+, 0, 0, 23, 16, 16</column>
+<column name="add_ln136_fu_1612_p2">+, 0, 0, 15, 8, 8</column>
+<column name="i_1_fu_1493_p2">+, 0, 0, 39, 32, 1</column>
+<column name="i_fu_1648_p2">+, 0, 0, 39, 32, 1</column>
+<column name="icmp_ln113_fu_1463_p2">icmp, 0, 0, 18, 32, 6</column>
+<column name="icmp_ln116_fu_1654_p2">icmp, 0, 0, 18, 32, 6</column>
+<column name="icmp_ln123_fu_1509_p2">icmp, 0, 0, 18, 26, 1</column>
+<column name="icmp_ln135_fu_1548_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="select_ln135_fu_1687_p3">select, 0, 0, 32, 1, 32</column>
+<column name="xor_ln135_fu_1542_p2">xor, 0, 0, 32, 32, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">1249, 276, 1, 276</column>
+<column name="ctx_data_0_address0">56, 13, 4, 52</column>
+<column name="ctx_data_0_address1">50, 11, 4, 44</column>
+<column name="ctx_data_0_ce0">15, 3, 1, 3</column>
+<column name="ctx_data_0_ce1">15, 3, 1, 3</column>
+<column name="ctx_data_0_d0">21, 4, 8, 32</column>
+<column name="ctx_data_0_d1">15, 3, 8, 24</column>
+<column name="ctx_data_1_address0">56, 13, 4, 52</column>
+<column name="ctx_data_1_address1">50, 11, 4, 44</column>
+<column name="ctx_data_1_ce0">15, 3, 1, 3</column>
+<column name="ctx_data_1_ce1">15, 3, 1, 3</column>
+<column name="ctx_data_1_d0">21, 4, 8, 32</column>
+<column name="ctx_data_1_d1">15, 3, 8, 24</column>
+<column name="ctx_data_2_address0">56, 13, 4, 52</column>
+<column name="ctx_data_2_address1">50, 11, 4, 44</column>
+<column name="ctx_data_2_ce0">15, 3, 1, 3</column>
+<column name="ctx_data_2_ce1">15, 3, 1, 3</column>
+<column name="ctx_data_2_d0">21, 4, 8, 32</column>
+<column name="ctx_data_2_d1">15, 3, 8, 24</column>
+<column name="ctx_data_3_address0">56, 13, 4, 52</column>
+<column name="ctx_data_3_address1">50, 11, 4, 44</column>
+<column name="ctx_data_3_ce0">15, 3, 1, 3</column>
+<column name="ctx_data_3_ce1">15, 3, 1, 3</column>
+<column name="ctx_data_3_d0">21, 4, 8, 32</column>
+<column name="ctx_data_3_d1">15, 3, 8, 24</column>
+<column name="ctx_state_0_0_reg_1313">9, 2, 32, 64</column>
+<column name="ctx_state_1_0_reg_1323">9, 2, 32, 64</column>
+<column name="ctx_state_2_0_reg_1333">9, 2, 32, 64</column>
+<column name="ctx_state_3_0_reg_1343">9, 2, 32, 64</column>
+<column name="ctx_state_4_0_reg_1353">9, 2, 32, 64</column>
+<column name="ctx_state_5_0_reg_1363">9, 2, 32, 64</column>
+<column name="ctx_state_6_0_reg_1373">9, 2, 32, 64</column>
+<column name="ctx_state_7_0_reg_1383">9, 2, 32, 64</column>
+<column name="grp_sha256_transform_fu_1393_ctx_state_0_read">15, 3, 32, 96</column>
+<column name="grp_sha256_transform_fu_1393_ctx_state_1_read">15, 3, 32, 96</column>
+<column name="grp_sha256_transform_fu_1393_ctx_state_2_read">15, 3, 32, 96</column>
+<column name="grp_sha256_transform_fu_1393_ctx_state_3_read">15, 3, 32, 96</column>
+<column name="grp_sha256_transform_fu_1393_ctx_state_4_read">15, 3, 32, 96</column>
+<column name="grp_sha256_transform_fu_1393_ctx_state_5_read">15, 3, 32, 96</column>
+<column name="grp_sha256_transform_fu_1393_ctx_state_6_read">15, 3, 32, 96</column>
+<column name="grp_sha256_transform_fu_1393_ctx_state_7_read">15, 3, 32, 96</column>
+<column name="hash_address0">85, 17, 6, 102</column>
+<column name="hash_address1">85, 17, 6, 102</column>
+<column name="hash_d0">85, 17, 8, 136</column>
+<column name="hash_d1">85, 17, 8, 136</column>
+<column name="i_0_in_reg_1304">9, 2, 32, 64</column>
+<column name="i_1_in_reg_1295">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln136_reg_2142">8, 0, 8, 0</column>
+<column name="ap_CS_fsm">275, 0, 275, 0</column>
+<column name="ctx_state_0_0_reg_1313">32, 0, 32, 0</column>
+<column name="ctx_state_0_ret4_reg_2097">32, 0, 32, 0</column>
+<column name="ctx_state_1_0_reg_1323">32, 0, 32, 0</column>
+<column name="ctx_state_1_ret5_reg_2102">32, 0, 32, 0</column>
+<column name="ctx_state_2_0_reg_1333">32, 0, 32, 0</column>
+<column name="ctx_state_2_ret6_reg_2107">32, 0, 32, 0</column>
+<column name="ctx_state_3_0_reg_1343">32, 0, 32, 0</column>
+<column name="ctx_state_3_ret7_reg_2112">32, 0, 32, 0</column>
+<column name="ctx_state_4_0_reg_1353">32, 0, 32, 0</column>
+<column name="ctx_state_4_ret8_reg_2117">32, 0, 32, 0</column>
+<column name="ctx_state_5_0_reg_1363">32, 0, 32, 0</column>
+<column name="ctx_state_5_ret9_reg_2122">32, 0, 32, 0</column>
+<column name="ctx_state_6_0_reg_1373">32, 0, 32, 0</column>
+<column name="ctx_state_6_ret1_reg_2127">32, 0, 32, 0</column>
+<column name="ctx_state_7_0_reg_1383">32, 0, 32, 0</column>
+<column name="ctx_state_7_ret1_reg_2132">32, 0, 32, 0</column>
+<column name="grp_sha256_transform_fu_1393_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_0_in_reg_1304">32, 0, 32, 0</column>
+<column name="i_1_in_reg_1295">32, 0, 32, 0</column>
+<column name="icmp_ln113_reg_2076">1, 0, 1, 0</column>
+<column name="icmp_ln135_reg_2137">1, 0, 1, 0</column>
+<column name="trunc_ln10_reg_2193">8, 0, 8, 0</column>
+<column name="trunc_ln11_reg_2198">8, 0, 8, 0</column>
+<column name="trunc_ln12_reg_2203">8, 0, 8, 0</column>
+<column name="trunc_ln13_reg_2208">8, 0, 8, 0</column>
+<column name="trunc_ln150_1_reg_2213">8, 0, 8, 0</column>
+<column name="trunc_ln150_2_reg_2253">8, 0, 8, 0</column>
+<column name="trunc_ln150_reg_2293">8, 0, 8, 0</column>
+<column name="trunc_ln151_1_reg_2218">8, 0, 8, 0</column>
+<column name="trunc_ln151_2_reg_2258">8, 0, 8, 0</column>
+<column name="trunc_ln151_reg_2298">8, 0, 8, 0</column>
+<column name="trunc_ln152_1_reg_2223">8, 0, 8, 0</column>
+<column name="trunc_ln152_2_reg_2263">8, 0, 8, 0</column>
+<column name="trunc_ln152_reg_2303">8, 0, 8, 0</column>
+<column name="trunc_ln153_1_reg_2228">8, 0, 8, 0</column>
+<column name="trunc_ln153_2_reg_2268">8, 0, 8, 0</column>
+<column name="trunc_ln153_reg_2308">8, 0, 8, 0</column>
+<column name="trunc_ln154_1_reg_2233">8, 0, 8, 0</column>
+<column name="trunc_ln154_2_reg_2273">8, 0, 8, 0</column>
+<column name="trunc_ln154_reg_2313">8, 0, 8, 0</column>
+<column name="trunc_ln155_1_reg_2238">8, 0, 8, 0</column>
+<column name="trunc_ln155_2_reg_2278">8, 0, 8, 0</column>
+<column name="trunc_ln155_reg_2318">8, 0, 8, 0</column>
+<column name="trunc_ln156_1_reg_2243">8, 0, 8, 0</column>
+<column name="trunc_ln156_2_reg_2283">8, 0, 8, 0</column>
+<column name="trunc_ln156_reg_2323">8, 0, 8, 0</column>
+<column name="trunc_ln157_1_reg_2248">8, 0, 8, 0</column>
+<column name="trunc_ln157_2_reg_2288">8, 0, 8, 0</column>
+<column name="trunc_ln157_reg_2328">8, 0, 8, 0</column>
+<column name="trunc_ln2_reg_2173">8, 0, 8, 0</column>
+<column name="trunc_ln3_reg_2178">8, 0, 8, 0</column>
+<column name="trunc_ln4_reg_2183">8, 0, 8, 0</column>
+<column name="trunc_ln5_reg_2147">8, 0, 8, 0</column>
+<column name="trunc_ln6_reg_2152">8, 0, 8, 0</column>
+<column name="trunc_ln7_reg_2157">8, 0, 8, 0</column>
+<column name="trunc_ln8_reg_2188">8, 0, 8, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, sha256_final, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, sha256_final, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, sha256_final, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, sha256_final, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, sha256_final, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, sha256_final, return value</column>
+<column name="ctx_data_0_address0">out, 4, ap_memory, ctx_data_0, array</column>
+<column name="ctx_data_0_ce0">out, 1, ap_memory, ctx_data_0, array</column>
+<column name="ctx_data_0_we0">out, 1, ap_memory, ctx_data_0, array</column>
+<column name="ctx_data_0_d0">out, 8, ap_memory, ctx_data_0, array</column>
+<column name="ctx_data_0_q0">in, 8, ap_memory, ctx_data_0, array</column>
+<column name="ctx_data_0_address1">out, 4, ap_memory, ctx_data_0, array</column>
+<column name="ctx_data_0_ce1">out, 1, ap_memory, ctx_data_0, array</column>
+<column name="ctx_data_0_we1">out, 1, ap_memory, ctx_data_0, array</column>
+<column name="ctx_data_0_d1">out, 8, ap_memory, ctx_data_0, array</column>
+<column name="ctx_data_0_q1">in, 8, ap_memory, ctx_data_0, array</column>
+<column name="ctx_data_1_address0">out, 4, ap_memory, ctx_data_1, array</column>
+<column name="ctx_data_1_ce0">out, 1, ap_memory, ctx_data_1, array</column>
+<column name="ctx_data_1_we0">out, 1, ap_memory, ctx_data_1, array</column>
+<column name="ctx_data_1_d0">out, 8, ap_memory, ctx_data_1, array</column>
+<column name="ctx_data_1_q0">in, 8, ap_memory, ctx_data_1, array</column>
+<column name="ctx_data_1_address1">out, 4, ap_memory, ctx_data_1, array</column>
+<column name="ctx_data_1_ce1">out, 1, ap_memory, ctx_data_1, array</column>
+<column name="ctx_data_1_we1">out, 1, ap_memory, ctx_data_1, array</column>
+<column name="ctx_data_1_d1">out, 8, ap_memory, ctx_data_1, array</column>
+<column name="ctx_data_1_q1">in, 8, ap_memory, ctx_data_1, array</column>
+<column name="ctx_data_2_address0">out, 4, ap_memory, ctx_data_2, array</column>
+<column name="ctx_data_2_ce0">out, 1, ap_memory, ctx_data_2, array</column>
+<column name="ctx_data_2_we0">out, 1, ap_memory, ctx_data_2, array</column>
+<column name="ctx_data_2_d0">out, 8, ap_memory, ctx_data_2, array</column>
+<column name="ctx_data_2_q0">in, 8, ap_memory, ctx_data_2, array</column>
+<column name="ctx_data_2_address1">out, 4, ap_memory, ctx_data_2, array</column>
+<column name="ctx_data_2_ce1">out, 1, ap_memory, ctx_data_2, array</column>
+<column name="ctx_data_2_we1">out, 1, ap_memory, ctx_data_2, array</column>
+<column name="ctx_data_2_d1">out, 8, ap_memory, ctx_data_2, array</column>
+<column name="ctx_data_2_q1">in, 8, ap_memory, ctx_data_2, array</column>
+<column name="ctx_data_3_address0">out, 4, ap_memory, ctx_data_3, array</column>
+<column name="ctx_data_3_ce0">out, 1, ap_memory, ctx_data_3, array</column>
+<column name="ctx_data_3_we0">out, 1, ap_memory, ctx_data_3, array</column>
+<column name="ctx_data_3_d0">out, 8, ap_memory, ctx_data_3, array</column>
+<column name="ctx_data_3_q0">in, 8, ap_memory, ctx_data_3, array</column>
+<column name="ctx_data_3_address1">out, 4, ap_memory, ctx_data_3, array</column>
+<column name="ctx_data_3_ce1">out, 1, ap_memory, ctx_data_3, array</column>
+<column name="ctx_data_3_we1">out, 1, ap_memory, ctx_data_3, array</column>
+<column name="ctx_data_3_d1">out, 8, ap_memory, ctx_data_3, array</column>
+<column name="ctx_data_3_q1">in, 8, ap_memory, ctx_data_3, array</column>
+<column name="ctx_datalen_read">in, 32, ap_none, ctx_datalen_read, scalar</column>
+<column name="ctx_bitlen_0_read">in, 32, ap_none, ctx_bitlen_0_read, scalar</column>
+<column name="p_read3">in, 32, ap_none, p_read3, scalar</column>
+<column name="p_read2">in, 32, ap_none, p_read2, scalar</column>
+<column name="p_read4">in, 32, ap_none, p_read4, scalar</column>
+<column name="p_read5">in, 32, ap_none, p_read5, scalar</column>
+<column name="p_read6">in, 32, ap_none, p_read6, scalar</column>
+<column name="p_read7">in, 32, ap_none, p_read7, scalar</column>
+<column name="p_read8">in, 32, ap_none, p_read8, scalar</column>
+<column name="p_read9">in, 32, ap_none, p_read9, scalar</column>
+<column name="p_read10">in, 32, ap_none, p_read10, scalar</column>
+<column name="hash_address0">out, 6, ap_memory, hash, array</column>
+<column name="hash_ce0">out, 1, ap_memory, hash, array</column>
+<column name="hash_we0">out, 1, ap_memory, hash, array</column>
+<column name="hash_d0">out, 8, ap_memory, hash, array</column>
+<column name="hash_address1">out, 6, ap_memory, hash, array</column>
+<column name="hash_ce1">out, 1, ap_memory, hash, array</column>
+<column name="hash_we1">out, 1, ap_memory, hash, array</column>
+<column name="hash_d1">out, 8, ap_memory, hash, array</column>
+</table>
+</item>
+</section>
+</profile>

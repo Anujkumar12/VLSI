@@ -1,0 +1,246 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'sha256'" level="0">
+<item name = "Date">Fri Mar 26 11:24:11 2021
+</item>
+<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
+<item name = "Project">sha</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">10.00</item>
+<item name = "Clock uncertainty (ns)">1.25</item>
+<item name = "Estimated clock period (ns)">8.34</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_sha256_final_fu_836">sha256_final, ?, ?, ?, ?, none</column>
+<column name="grp_sha256_update_fu_855">sha256_update, 37, 28097, 37, 28097, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">768, 2822800, 64 ~ 28228, -, -, 12 ~ 100, no</column>
+<column name=" + Loop 1.1">128, 128, 2, -, -, 64, no</column>
+<column name=" + Loop 1.2">24, 126, 2, -, -, 12 ~ 63, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 251, 188</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">10, -, 7709, 5364</column>
+<column name="Memory">2, -, 0, 0</column>
+<column name="Multiplexer">-, -, -, 1003</column>
+<column name="Register">-, -, 1245, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">4, 0, 8, 12</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="sha256_AXILiteS_s_axi_U">sha256_AXILiteS_s_axi, 4, 0, 272, 308</column>
+<column name="grp_sha256_final_fu_836">sha256_final, 3, 0, 4174, 3195</column>
+<column name="grp_sha256_update_fu_855">sha256_update, 3, 0, 3263, 1861</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="seg_buf_U">sha256_seg_buf, 1, 0, 0, 64, 8, 1, 512</column>
+<column name="sha256ctx_data_U">sha256_sha256ctx_bkb, 1, 0, 0, 64, 8, 1, 512</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_7_fu_1267_p2">+, 0, 23, 11, 6, 1</column>
+<column name="i_fu_1207_p2">+, 0, 26, 12, 7, 1</column>
+<column name="n_1_fu_1233_p2">+, 0, 101, 37, 32, 8</column>
+<column name="seg_offset_1_fu_1243_p2">+, 0, 101, 37, 32, 7</column>
+<column name="sum2_fu_1282_p2">+, 0, 0, 10, 10, 10</column>
+<column name="sum_fu_1222_p2">+, 0, 0, 10, 10, 10</column>
+<column name="tmp1_fu_1213_p2">+, 0, 0, 10, 10, 10</column>
+<column name="tmp2_fu_1273_p2">+, 0, 0, 10, 10, 10</column>
+<column name="exitcond4_fu_1262_p2">icmp, 0, 0, 16, 32, 32</column>
+<column name="exitcond5_fu_1201_p2">icmp, 0, 0, 4, 7, 8</column>
+<column name="icmp_fu_1187_p2">icmp, 0, 0, 13, 26, 1</column>
+<column name="tmp_fu_1171_p2">icmp, 0, 0, 16, 32, 1</column>
+<column name="ap_block_state5_on_subcall_done">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">185, 42, 1, 42</column>
+<column name="data_address0">15, 3, 8, 24</column>
+<column name="digest_address0">149, 33, 5, 165</column>
+<column name="grp_sha256_update_fu_855_ctx_datalen_read">15, 3, 32, 96</column>
+<column name="grp_sha256_update_fu_855_len">15, 3, 32, 96</column>
+<column name="grp_sha256_update_fu_855_p_read1">15, 3, 32, 96</column>
+<column name="grp_sha256_update_fu_855_p_read10">15, 3, 32, 96</column>
+<column name="grp_sha256_update_fu_855_p_read2">15, 3, 32, 96</column>
+<column name="grp_sha256_update_fu_855_p_read3">15, 3, 32, 96</column>
+<column name="grp_sha256_update_fu_855_p_read4">15, 3, 32, 96</column>
+<column name="grp_sha256_update_fu_855_p_read5">15, 3, 32, 96</column>
+<column name="grp_sha256_update_fu_855_p_read6">15, 3, 32, 96</column>
+<column name="grp_sha256_update_fu_855_p_read7">15, 3, 32, 96</column>
+<column name="grp_sha256_update_fu_855_p_read8">15, 3, 32, 96</column>
+<column name="grp_sha256_update_fu_855_p_read9">15, 3, 32, 96</column>
+<column name="i9_reg_814">9, 2, 7, 14</column>
+<column name="i_1_reg_825">9, 2, 6, 12</column>
+<column name="n_fu_154">15, 3, 32, 96</column>
+<column name="seg_buf_address0">165, 37, 6, 222</column>
+<column name="seg_buf_ce0">21, 4, 1, 4</column>
+<column name="seg_buf_ce1">9, 2, 1, 2</column>
+<column name="seg_buf_d0">15, 3, 8, 24</column>
+<column name="seg_buf_we0">15, 3, 1, 3</column>
+<column name="seg_buf_we1">9, 2, 1, 2</column>
+<column name="seg_offset_fu_202">9, 2, 32, 64</column>
+<column name="sha256ctx_bitlen_0_2_fu_162">9, 2, 32, 64</column>
+<column name="sha256ctx_bitlen_1_2_fu_166">9, 2, 32, 64</column>
+<column name="sha256ctx_data_address0">15, 3, 6, 18</column>
+<column name="sha256ctx_data_address1">15, 3, 6, 18</column>
+<column name="sha256ctx_data_ce0">15, 3, 1, 3</column>
+<column name="sha256ctx_data_ce1">15, 3, 1, 3</column>
+<column name="sha256ctx_data_d0">15, 3, 8, 24</column>
+<column name="sha256ctx_data_we0">15, 3, 1, 3</column>
+<column name="sha256ctx_data_we1">9, 2, 1, 2</column>
+<column name="sha256ctx_datalen_fu_158">9, 2, 32, 64</column>
+<column name="sha256ctx_state_0_2_fu_170">9, 2, 32, 64</column>
+<column name="sha256ctx_state_1_2_fu_174">9, 2, 32, 64</column>
+<column name="sha256ctx_state_2_2_fu_178">9, 2, 32, 64</column>
+<column name="sha256ctx_state_3_2_fu_182">9, 2, 32, 64</column>
+<column name="sha256ctx_state_4_2_fu_186">9, 2, 32, 64</column>
+<column name="sha256ctx_state_5_2_fu_190">9, 2, 32, 64</column>
+<column name="sha256ctx_state_6_2_fu_194">9, 2, 32, 64</column>
+<column name="sha256ctx_state_7_2_fu_198">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">41, 0, 41, 0</column>
+<column name="ap_reg_grp_sha256_final_fu_836_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_sha256_update_fu_855_ap_start">1, 0, 1, 0</column>
+<column name="i9_cast4_reg_1410">7, 0, 32, 25</column>
+<column name="i9_reg_814">7, 0, 7, 0</column>
+<column name="i_1_cast_reg_1428">6, 0, 32, 26</column>
+<column name="i_1_reg_825">6, 0, 6, 0</column>
+<column name="i_7_reg_1436">6, 0, 6, 0</column>
+<column name="i_reg_1418">7, 0, 7, 0</column>
+<column name="icmp_reg_1406">1, 0, 1, 0</column>
+<column name="n_fu_154">32, 0, 32, 0</column>
+<column name="n_load_reg_1396">32, 0, 32, 0</column>
+<column name="reg_1033">32, 0, 32, 0</column>
+<column name="reg_1039">32, 0, 32, 0</column>
+<column name="reg_1045">32, 0, 32, 0</column>
+<column name="reg_1051">32, 0, 32, 0</column>
+<column name="reg_1057">32, 0, 32, 0</column>
+<column name="reg_1063">32, 0, 32, 0</column>
+<column name="reg_1069">32, 0, 32, 0</column>
+<column name="reg_1075">32, 0, 32, 0</column>
+<column name="reg_1081">32, 0, 32, 0</column>
+<column name="reg_1087">32, 0, 32, 0</column>
+<column name="reg_1093">32, 0, 32, 0</column>
+<column name="seg_offset_fu_202">32, 0, 32, 0</column>
+<column name="sha256ctx_bitlen_0_1_reg_1451">32, 0, 32, 0</column>
+<column name="sha256ctx_bitlen_0_2_fu_162">32, 0, 32, 0</column>
+<column name="sha256ctx_bitlen_1_1_reg_1456">32, 0, 32, 0</column>
+<column name="sha256ctx_bitlen_1_2_fu_166">32, 0, 32, 0</column>
+<column name="sha256ctx_datalen_fu_158">32, 0, 32, 0</column>
+<column name="sha256ctx_datalen_lo_1_reg_1446">32, 0, 32, 0</column>
+<column name="sha256ctx_state_0_2_2_reg_1461">32, 0, 32, 0</column>
+<column name="sha256ctx_state_0_2_fu_170">32, 0, 32, 0</column>
+<column name="sha256ctx_state_1_2_2_reg_1466">32, 0, 32, 0</column>
+<column name="sha256ctx_state_1_2_fu_174">32, 0, 32, 0</column>
+<column name="sha256ctx_state_2_2_2_reg_1471">32, 0, 32, 0</column>
+<column name="sha256ctx_state_2_2_fu_178">32, 0, 32, 0</column>
+<column name="sha256ctx_state_3_2_2_reg_1476">32, 0, 32, 0</column>
+<column name="sha256ctx_state_3_2_fu_182">32, 0, 32, 0</column>
+<column name="sha256ctx_state_4_2_2_reg_1481">32, 0, 32, 0</column>
+<column name="sha256ctx_state_4_2_fu_186">32, 0, 32, 0</column>
+<column name="sha256ctx_state_5_2_2_reg_1486">32, 0, 32, 0</column>
+<column name="sha256ctx_state_5_2_fu_190">32, 0, 32, 0</column>
+<column name="sha256ctx_state_6_2_2_reg_1491">32, 0, 32, 0</column>
+<column name="sha256ctx_state_6_2_fu_194">32, 0, 32, 0</column>
+<column name="sha256ctx_state_7_2_2_reg_1496">32, 0, 32, 0</column>
+<column name="sha256ctx_state_7_2_fu_198">32, 0, 32, 0</column>
+<column name="tmp_96_reg_1390">10, 0, 10, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_AXILiteS_AWVALID">in, 1, s_axi, AXILiteS, array</column>
+<column name="s_axi_AXILiteS_AWREADY">out, 1, s_axi, AXILiteS, array</column>
+<column name="s_axi_AXILiteS_AWADDR">in, 10, s_axi, AXILiteS, array</column>
+<column name="s_axi_AXILiteS_WVALID">in, 1, s_axi, AXILiteS, array</column>
+<column name="s_axi_AXILiteS_WREADY">out, 1, s_axi, AXILiteS, array</column>
+<column name="s_axi_AXILiteS_WDATA">in, 32, s_axi, AXILiteS, array</column>
+<column name="s_axi_AXILiteS_WSTRB">in, 4, s_axi, AXILiteS, array</column>
+<column name="s_axi_AXILiteS_ARVALID">in, 1, s_axi, AXILiteS, array</column>
+<column name="s_axi_AXILiteS_ARREADY">out, 1, s_axi, AXILiteS, array</column>
+<column name="s_axi_AXILiteS_ARADDR">in, 10, s_axi, AXILiteS, array</column>
+<column name="s_axi_AXILiteS_RVALID">out, 1, s_axi, AXILiteS, array</column>
+<column name="s_axi_AXILiteS_RREADY">in, 1, s_axi, AXILiteS, array</column>
+<column name="s_axi_AXILiteS_RDATA">out, 32, s_axi, AXILiteS, array</column>
+<column name="s_axi_AXILiteS_RRESP">out, 2, s_axi, AXILiteS, array</column>
+<column name="s_axi_AXILiteS_BVALID">out, 1, s_axi, AXILiteS, array</column>
+<column name="s_axi_AXILiteS_BREADY">in, 1, s_axi, AXILiteS, array</column>
+<column name="s_axi_AXILiteS_BRESP">out, 2, s_axi, AXILiteS, array</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, sha256, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, sha256, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, sha256, return value</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">5.99</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'i'">phi, 0.00, 0.00, -, -, -, -, -, -, -, -, -, -, &apos;i&apos;, sha256.c:38</column>
+<column name="'i9_cast5', sha256.c:38">zext, 0.00, 0.00, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp1', sha256.c:38">add, 1.86, 1.86, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'sum', sha256.c:33">add, 1.86, 3.73, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'sum_cast', sha256.c:33">zext, 0.00, 3.73, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'data_addr', sha256.c:39">getelementptr, 0.00, 3.73, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'data_load', sha256.c:39">load, 2.27, 5.99, -, -, -, -, -, -, &apos;data&apos;, -, -, -, -</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sha" solutionName="solution1" date="2021-03-27T11:56:00.621-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sha" solutionName="solution1" date="2021-03-27T11:50:16.249-0700"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'k' will not be exposed as RTL port." projectName="sha" solutionName="solution2" date="2021-03-31T11:05:47.931-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 64 for loop 'Loop-0' (./sha256_impl.c:94:1) in function 'sha256_update'." projectName="sha" solutionName="solution2" date="2021-03-31T11:05:43.316-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 64 for loop 'Loop-2' (./sha256_impl.c:51:1) in function 'sha256_transform'." projectName="sha" solutionName="solution2" date="2021-03-31T11:05:43.038-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 64 for loop 'Loop-2' (./sha256_impl.c:51:1) in function 'sha256_transform'." projectName="sha" solutionName="solution2" date="2021-03-31T11:05:43.020-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 48 for loop 'Loop-1' (./sha256_impl.c:38:1) in function 'sha256_transform'." projectName="sha" solutionName="solution2" date="2021-03-31T11:05:43.003-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 48 for loop 'Loop-1' (./sha256_impl.c:38:1) in function 'sha256_transform'." projectName="sha" solutionName="solution2" date="2021-03-31T11:05:42.918-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 16 for loop 'Loop-0' (./sha256_impl.c:35:1) in function 'sha256_transform'." projectName="sha" solutionName="solution2" date="2021-03-31T11:05:42.890-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 16 for loop 'Loop-0' (./sha256_impl.c:35:1) in function 'sha256_transform'." projectName="sha" solutionName="solution2" date="2021-03-31T11:05:42.878-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 4 for loop 'Loop-3' (./sha256_impl.c:144:1) in function 'sha256_final'." projectName="sha" solutionName="solution2" date="2021-03-31T11:05:42.861-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 4 for loop 'Loop-3' (./sha256_impl.c:144:1) in function 'sha256_final'." projectName="sha" solutionName="solution2" date="2021-03-31T11:05:42.829-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 56 for loop 'Loop-2' (./sha256_impl.c:123:1) in function 'sha256_final'." projectName="sha" solutionName="solution2" date="2021-03-31T11:05:42.818-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 56 for loop 'Loop-2' (./sha256_impl.c:123:1) in function 'sha256_final'." projectName="sha" solutionName="solution2" date="2021-03-31T11:05:42.806-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 32 for loop 'Loop-1' (sha256.c:58:1) in function 'sha256'." projectName="sha" solutionName="solution2" date="2021-03-31T11:05:42.794-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 32 for loop 'Loop-1' (sha256.c:58:1) in function 'sha256'." projectName="sha" solutionName="solution2" date="2021-03-31T11:05:42.782-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 63 for loop 'Loop-0-1' (sha256.c:47:1) in function 'sha256'." projectName="sha" solutionName="solution2" date="2021-03-31T11:05:42.771-0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'k' will not be exposed as RTL port." projectName="sha" solutionName="solution1" date="2021-03-26T11:24:10.993-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 64 for loop 'Loop-0' (./sha256_impl.c:94:1) in function 'sha256_update'." projectName="sha" solutionName="solution1" date="2021-03-26T11:24:06.783-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 64 for loop 'Loop-2' (./sha256_impl.c:51:1) in function 'sha256_transform'." projectName="sha" solutionName="solution1" date="2021-03-26T11:24:06.616-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 64 for loop 'Loop-2' (./sha256_impl.c:51:1) in function 'sha256_transform'." projectName="sha" solutionName="solution1" date="2021-03-26T11:24:06.606-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 48 for loop 'Loop-1' (./sha256_impl.c:38:1) in function 'sha256_transform'." projectName="sha" solutionName="solution1" date="2021-03-26T11:24:06.597-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 48 for loop 'Loop-1' (./sha256_impl.c:38:1) in function 'sha256_transform'." projectName="sha" solutionName="solution1" date="2021-03-26T11:24:06.586-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 16 for loop 'Loop-0' (./sha256_impl.c:35:1) in function 'sha256_transform'." projectName="sha" solutionName="solution1" date="2021-03-26T11:24:06.575-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 16 for loop 'Loop-0' (./sha256_impl.c:35:1) in function 'sha256_transform'." projectName="sha" solutionName="solution1" date="2021-03-26T11:24:06.548-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 4 for loop 'Loop-3' (./sha256_impl.c:144:1) in function 'sha256_final'." projectName="sha" solutionName="solution1" date="2021-03-26T11:24:06.526-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 4 for loop 'Loop-3' (./sha256_impl.c:144:1) in function 'sha256_final'." projectName="sha" solutionName="solution1" date="2021-03-26T11:24:06.506-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 56 for loop 'Loop-2' (./sha256_impl.c:123:1) in function 'sha256_final'." projectName="sha" solutionName="solution1" date="2021-03-26T11:24:06.495-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 56 for loop 'Loop-2' (./sha256_impl.c:123:1) in function 'sha256_final'." projectName="sha" solutionName="solution1" date="2021-03-26T11:24:06.482-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 12 to 32 for loop 'Loop-1' (sha256.c:58:1) in function 'sha256'." projectName="sha" solutionName="solution1" date="2021-03-26T11:24:06.452-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 32 for loop 'Loop-1' (sha256.c:58:1) in function 'sha256'." projectName="sha" solutionName="solution1" date="2021-03-26T11:24:06.444-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 100 to 63 for loop 'Loop-0-1' (sha256.c:47:1) in function 'sha256'." projectName="sha" solutionName="solution1" date="2021-03-26T11:24:06.428-0700" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
